@@ -1,31 +1,66 @@
 package gw.employee;
 
 public class Employee {
-	String gwid;
-	String gwpasswd;
-	String gwname;
+	private int id;
+	private String pw;
+	private String name;
+	private String rank;
+	private String depname;
+	private String tel;
+	private String phone;
 	
-	public String getGwid() {
-		return gwid;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
 	}
 	
-	public void setGwid(String gwid) {
-		this.gwid = gwid;
+	public String getPw() {
+		return pw;
 	}
 	
-	public String getGwpasswd() {
-		return gwpasswd;
+	public void setPw(String pw) {
+		this.pw = pw;
 	}
 	
-	public void setGwpasswd(String gwpasswd) {
-		this.gwpasswd = gwpasswd;
+	public String getName() {
+		return name;
 	}
 	
-	public String getGwname() {
-		return gwname;
+	public void setName(String name) {
+		this.name = name;
 	}
 	
-	public void setGwname(String gwname) {
-		this.gwname = gwname;
+	public String getRank() {
+		return rank;
+	}
+	
+	public void setRank(String rank) {
+		this.rank = rank;
+	}
+	
+	public String getDepname() {
+		return depname;
+	}
+	
+	public void setDepname(String depname) {
+		this.depname = depname;
+	}
+	
+	public String getTel() {
+		return tel;
+	}
+	
+	public void setTel(String tel) {
+		this.tel = tel;
+	}
+	
+	public String getPhone() {
+		return phone;
+	}
+	
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
 }

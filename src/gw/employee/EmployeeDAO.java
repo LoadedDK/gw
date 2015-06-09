@@ -12,24 +12,29 @@ public class EmployeeDAO {
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;
 	
-	public boolean addMember(Employee employee) {
+	public void register(Employee employee) {
 		conn = DBConn.connect();
-		String sql = "insert into employee(gwid, gwpasswd, gwname) values(?,?,?)";
-		
 		try {
-			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, employee.getGwid());
-			pstmt.setString(2, employee.getGwpasswd());
-			pstmt.setString(3, employee.getGwname());
+			
+			String query = "INSERT INTO employee (id, pw, name, rank, depname, tel, phone, joinDate) VALUES (?, ?, ?, ?, ?, ?, ?, NOW())";
+			pstmt = conn.prepareStatement(query);
+			
+			pstmt.setInt(1, employee.getId());
+			pstmt.setString(2, employee.getPw());
+			pstmt.setString(3, employee.getName());
+			pstmt.setString(4, employee.getRank());
+			pstmt.setString(5, employee.getDepname());
+			pstmt.setString(6, employee.getTel());
+			pstmt.setString(7, employee.getPhone());
+			
 			pstmt.executeUpdate();
 		}
-		catch (SQLException e) {
+		catch(Exception e) {
 			e.printStackTrace();
-			return false;
+			System.out.println(e);
 		}
 		finally {
 			try {
-				pstmt.close();
 				conn.close();
 			}
 			catch (SQLException e) {
@@ -37,6 +42,5 @@ public class EmployeeDAO {
 				e.printStackTrace();
 			}
 		}
-		return true;
 	}
 }
