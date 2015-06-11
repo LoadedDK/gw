@@ -15,7 +15,7 @@ public class EmployeeDAO {
 	ResultSet rs = null;
 	List<Employee> employeelist = new ArrayList<Employee>();
 	
-	public void register(Employee employee) {
+	public boolean register(Employee employee) {
 		conn = DBConn.connect();
 		try {
 			
@@ -35,6 +35,7 @@ public class EmployeeDAO {
 		catch(Exception e) {
 			e.printStackTrace();
 			System.out.println(e);
+			return false;
 		}
 		finally {
 			try {
@@ -45,6 +46,34 @@ public class EmployeeDAO {
 				e.printStackTrace();
 			}
 		}
+		return true;
+	}
+	
+	public boolean login(int id, String pw) {
+		conn = DBConn.connect();
+		String sql = "select id, pw from employee where id = ?";
+		boolean result = false;
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, id);
+			rs = pstmt.executeQuery();
+			rs.next();
+			if(rs.getString("pw").equals(pw))
+				result=true;
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return false;
+		}
+		finally {
+			try {
+				pstmt.close();
+				conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return result;
 	}
 	
 	//DB에서 리스트로 사원 정보 땡겨옴
@@ -81,6 +110,7 @@ public class EmployeeDAO {
 			}
 		}
 	}
+	
 	public void addList(Employee e) {
 		employeelist.add(e);
 	}
