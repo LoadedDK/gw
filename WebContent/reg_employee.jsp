@@ -19,40 +19,38 @@
 <h2>등록 내용 확인</h2>
 <table border=1 cellspacing="1" cellpadding="5">
 <tr>
-<td>사 번</td>
+<th>사 번</th>
 <td><jsp:getProperty property="id" name="emp"/></td>
 </tr>
 <tr>
-<td>비밀번호</td>
+<th>비밀번호</th>
 <td><%=emp.getPw() %></td>
 </tr>
 <tr>
-<td>이 름</td>
+<th>이 름</th>
 <td><%=emp.getName() %></td>
 </tr>
 <tr>
-<td>내선전화</td>
+<th>내선전화</th>
 <td><%=emp.getTel() %></td>
 </tr>
 <tr>
-<td>휴대전화</td>
+<th>휴대전화</th>
 <td><%=emp.getPhone() %></td>
 </tr>
 <tr>
-<td>직 급</td>
+<th>직 급</th>
 <td><%=emp.getRank() %></td>
 </tr>
 <tr>
-<td>소속부서명</td>
+<th>소속부서명</th>
 <td><%=emp.getDepname() %></td>
 </tr>
-<tr><td colspan="2" align="center">
-<input type="submit" value="사원 등록 완료"></td></tr>
 </table>
 <hr>
 <% empDAO.register(emp); %>
 
-<a href="main_form.jsp">목록 보기</a>
+<a href="employee_list.jsp">목록 보기</a>
 </center>
 <%@ include file="bottom.jsp" %>
 </body>

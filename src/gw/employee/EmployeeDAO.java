@@ -6,11 +6,14 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class EmployeeDAO {
 	Connection conn = null;
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;
+	List<Employee> employeelist = new ArrayList<Employee>();
 	
 	public void register(Employee employee) {
 		conn = DBConn.connect();
@@ -42,5 +45,47 @@ public class EmployeeDAO {
 				e.printStackTrace();
 			}
 		}
+	}
+	
+	//DB에서 리스트로 사원 정보 땡겨옴
+	public void setEmployeeList() {
+		Employee employee = new Employee();
+		conn = DBConn.connect();
+		try {
+			String query = "SELECT * FROM employee";
+			pstmt = conn.prepareStatement(query);
+			ResultSet rs = pstmt.executeQuery(query);
+			
+			while(rs.next()) {
+				employee.setId(rs.getInt("id"));
+				employee.setPw(rs.getString("pw"));
+				employee.setName(rs.getString("name"));
+				employee.setRank(rs.getString("rank"));
+				employee.setDepname(rs.getString("depname"));
+				employee.setTel(rs.getString("tel"));
+				employee.setPhone(rs.getString("phone"));
+				addList(employee);
+			}
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			System.out.println(e);
+		}
+		finally {
+			try {
+				conn.close();
+			}
+			catch (SQLException e) {
+				System.out.println("close");
+				e.printStackTrace();
+			}
+		}
+	}
+	public void addList(Employee e) {
+		employeelist.add(e);
+	}
+	
+	public List<Employee> getEmployeeList() {
+		return employeelist;
 	}
 }
