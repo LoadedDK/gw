@@ -11,7 +11,7 @@
 <p><p><p>
 <a href="page1.jsp"><img src="image/i1.png" width="150" height="40"/></a>&nbsp&nbsp&nbsp
 <a href="page2.jsp"><img src="image/i2.png" width="150" height="40"/></a>&nbsp&nbsp&nbsp
-<a href="page3.jsp"><img src="image/i3.png" width="150" height="40"/></a>&nbsp&nbsp&nbsphttp://marketplace.eclipse.org/marketplace-client-intro?mpc_install=1336
+<a href="page3.jsp"><img src="image/i3.png" width="150" height="40"/></a>&nbsp&nbsp&nbsp
 <a href="page4.jsp"><img src="image/i4.png" width="150" height="40"/></a>
 <hr>
 </body>
