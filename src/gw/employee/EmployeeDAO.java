@@ -78,7 +78,6 @@ public class EmployeeDAO {
 	
 	//DB에서 리스트로 사원 정보 땡겨옴
 	public void setEmployeeList() {
-		Employee employee = new Employee();
 		conn = DBConn.connect();
 		try {
 			String query = "SELECT * FROM employee";
@@ -86,6 +85,7 @@ public class EmployeeDAO {
 			ResultSet rs = pstmt.executeQuery(query);
 			
 			while(rs.next()) {
+				Employee employee = new Employee();
 				employee.setId(rs.getInt("id"));
 				employee.setPw(rs.getString("pw"));
 				employee.setName(rs.getString("name"));

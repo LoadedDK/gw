@@ -3,8 +3,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <% request.setCharacterEncoding("UTF-8"); %>
 
-<jsp:useBean id="emp" class="gw.employee.Employee"/>
-<jsp:useBean id="empDAO" class="gw.employee.EmployeeDAO"/>
 <jsp:setProperty name="emp" property="*"/>
 
 <html>
@@ -12,7 +10,6 @@
 <link rel="stylesheet" href="groupware.css" type="text/css" media="screen" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>reg_Employee</title>
-<%@ include file="topMenu.jsp" %>
 </head>
 <body>
 <center>
@@ -50,8 +47,7 @@
 <hr>
 <% empDAO.register(emp); %>
 
-<a href="employee_list.jsp">목록 보기</a>
+<a href="main.jsp?page_id=employee_list">사원 목록 보기</a>
 </center>
-<%@ include file="bottom.jsp" %>
 </body>
 </html>

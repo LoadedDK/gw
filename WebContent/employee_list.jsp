@@ -1,8 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import="gw.*"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<jsp:useBean id="emp" class="gw.employee.Employee"/>
-<jsp:useBean id="empDAO" class="gw.employee.EmployeeDAO"/>
+
 <%
 empDAO.setEmployeeList();
 %>
@@ -11,7 +10,6 @@ empDAO.setEmployeeList();
 <link rel="stylesheet" href="groupware.css" type="text/css" media="screen" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>사원 목록</title>
-<%@ include file="topMenu.jsp" %>
 </head>
 <body>
 <table border=1 width=500>
@@ -22,7 +20,7 @@ for(gw.employee.Employee e : empDAO.getEmployeeList()) {
 
 <tr>
 <td><%=e.getId() %> </td>
-<td><%=e.getPw() %></td>
+<td><%=e.getName() %></td>
 <td><%=e.getRank() %></td>
 <td><%=e.getDepname() %></td>
 <td><%=e.getTel() %></td>
@@ -33,5 +31,4 @@ for(gw.employee.Employee e : empDAO.getEmployeeList()) {
 %>
 </table>
 </body>
-<%@ include file="bottom.jsp" %>
 </html>

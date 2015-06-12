@@ -1,8 +1,13 @@
 @CHARSET "UTF-8";
 
+html{
+	height: 90%;
+}
+
 body{
-text-align : center;
-background-color: #ffe6bf;
+	text-align : center;
+	background-color: #ffe6bf;
+	height: 100%;
 }
 
 table {
@@ -41,7 +46,7 @@ input {
 input [type="submit"], [type="reset"], [type="button"] {
 	height: 25px;
 	width: 80px;
-	background-color: #ff00ff;
+	/*background-color: #ff00ff;*/
 }
 input [type="text"] {
 	height: 25px;
@@ -49,4 +54,31 @@ input [type="text"] {
 }
 
 
+/*layout*/
 
+#main {
+	/*width: 100%;*/
+	width: 1300px;
+	height: 100%;
+	margin: 0 auto;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	/*background: #00ffff url(images/colbg.png) repeat-y;*/
+	overflow: hidden;
+}
+
+#content {
+	float: clear:left;
+	width: auto;
+	margin-left: 40px;
+	background-color: /*#ff00ff;*/
+}
+
+#sidebar1 {
+	height: 100%;
+	float: left;
+	padding-left: 20px;
+	width: 300px;
+	/*background-color: #ffff00;*/
+}

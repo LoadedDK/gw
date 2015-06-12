@@ -8,9 +8,11 @@
 	<input type="submit" value="로그아웃">
 </c:when>
 <c:otherwise>
+아 이 디  : 
 	<input type="hidden" name="action" value="login">
-	<input type="text" name="id" size="10"><br>
-	<input type="password" name="pw" size="10"><br>
+	<input type="text" name="id" size="10">&nbsp&nbsp
+비밀번호 : 
+	<input type="password" name="pw" size="10">&nbsp&nbsp
 	<input type="submit" value="로그인">
 </c:otherwise>
 </c:choose>
