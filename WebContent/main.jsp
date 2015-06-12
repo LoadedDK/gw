@@ -3,6 +3,12 @@
 <% request.setCharacterEncoding("UTF-8"); %>
 <jsp:useBean id="emp" class="gw.employee.Employee"/>
 <jsp:useBean id="empDAO" class="gw.employee.EmployeeDAO"/>
+<%
+	if(session.getAttribute("id") == null) {
+		response.sendRedirect("login.jsp");
+	}
+%>
+
 <html>
 <head>
 <link rel="stylesheet" href="groupware.css" type="text/css" media="screen" />
