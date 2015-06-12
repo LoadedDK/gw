@@ -13,7 +13,7 @@
 </head>
 <body>
 <center>
-등록이 완료되었습니다.<br /><br />
+<br /><br />등록이 완료되었습니다.<br /><br />
 <button onclick="javascript_: location.href='draft_list.jsp';">확인</button>  
 </center>
 <% dftDAO.write(dft); %>

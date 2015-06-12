@@ -7,7 +7,7 @@
 	dftDAO.setDraftList();
 %>
 <%
-out.println(session.getAttribute("id"));
+	out.println(session.getAttribute("id"));
 %>
 <html>
 <head>

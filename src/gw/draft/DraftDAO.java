@@ -19,9 +19,10 @@ public class DraftDAO {
 		conn = DBConn.connect();
 		try {
 			
-			String query = "SELECT * FROM draft WHERE draft="+draftNum;
+			String query = "SELECT * FROM draft WHERE draft=?";
 			pstmt = conn.prepareStatement(query);
-			ResultSet rs = pstmt.executeQuery(query);
+			pstmt.setInt(1, draftNum);
+			ResultSet rs = pstmt.executeQuery();
 			
 			rs.next();
 			Draft draft = new Draft();

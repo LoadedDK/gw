@@ -76,7 +76,45 @@ public class EmployeeDAO {
 		}
 		return result;
 	}
-	
+	//DB에서 리스트로 사원 정보 땡겨옴
+		public Employee getEmployee(int id) {
+			conn = DBConn.connect();
+			try {
+				String query = "SELECT * FROM employee WHERE id=?";
+				pstmt = conn.prepareStatement(query);
+				pstmt.setInt(1, id);
+				ResultSet rs = pstmt.executeQuery();
+				
+				rs.next();
+				Employee employee = new Employee();
+				employee.setId(rs.getInt("id"));
+				employee.setPw(rs.getString("pw"));
+				employee.setName(rs.getString("name"));
+				employee.setRank(rs.getString("rank"));
+				employee.setDepname(rs.getString("depname"));
+				employee.setTel(rs.getString("tel"));
+				employee.setPhone(rs.getString("phone"));
+				
+				return employee;
+				
+			}
+			catch(Exception e) {
+				e.printStackTrace();
+				System.out.println(e);
+			}
+			finally {
+				try {
+					pstmt.close();
+					conn.close();
+				}
+				catch (SQLException e) {
+					System.out.println("close");
+					e.printStackTrace();
+				}
+			}
+			return null;
+		}
+		
 	//DB에서 리스트로 사원 정보 땡겨옴
 	public void getEmployeeList() {
 		conn = DBConn.connect();
