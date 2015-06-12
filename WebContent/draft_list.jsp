@@ -6,6 +6,9 @@
 <%
 	dftDAO.setDraftList();
 %>
+<%
+out.println(session.getAttribute("id"));
+%>
 <html>
 <head>
 <link rel="stylesheet" href="groupware.css" type="text/css" media="screen" />

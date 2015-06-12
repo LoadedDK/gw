@@ -78,7 +78,7 @@ public class EmployeeDAO {
 	}
 	
 	//DB에서 리스트로 사원 정보 땡겨옴
-	public void setEmployeeList() {
+	public void getEmployeeList() {
 		conn = DBConn.connect();
 		try {
 			String query = "SELECT * FROM employee";
@@ -117,7 +117,7 @@ public class EmployeeDAO {
 		employeelist.add(e);
 	}
 	
-	public List<Employee> getEmployeeList() {
+	public List<Employee> getList() {
 		return employeelist;
 	}
 }

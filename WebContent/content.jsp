@@ -15,8 +15,8 @@
  		else if (page_id.equals("employee_list")) {
 			%> <%@ include file="employee_list.jsp"%> <%
  		}
- 		else if (page_id.equals("reg_employee")) {
-			%> <%@ include file="reg_employee.jsp"%> <%
+ 		else if (page_id.equals("employee_reg")) {
+			%> <%@ include file="employee_reg.jsp"%> <%
  		}
 	}
 %>

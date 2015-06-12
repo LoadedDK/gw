@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" import="gw.*"%>
 <%
-	empDAO.setEmployeeList();
+	empDAO.getEmployeeList();
 %>
 <link rel="stylesheet" href="groupware.css" type="text/css" media="screen" />
 <table border="1" style="width: 500px">
@@ -14,7 +14,7 @@
 		<th>휴대전화</th>
 	</tr>
 	<%
-		for (gw.employee.Employee e : empDAO.getEmployeeList()) {
+		for (gw.employee.Employee e : empDAO.getList()) {
 	%>
 
 	<tr>

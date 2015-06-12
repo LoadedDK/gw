@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 사원 등록
 <div id="reg_form">
-	<form name="form1" method="post" action="main.jsp?page_id=reg_employee">
+	<form name="form1" method="post" action="main.jsp?page_id=employee_reg">
 		<table>
 			<tr>
 				<th>사 번</th>
