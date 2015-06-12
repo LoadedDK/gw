@@ -1,22 +1,30 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <div id="content">
 <%
-	String page_id = "home";
+	if(request.getParameter("idx1").equals("home")) {
+		
+	}
 
- 	if (!(request.getParameter("page_id") == null)) {
- 		page_id = request.getParameter("page_id");
-
- 		if (page_id.equals("home")) {
- 			out.println("메인이다아");
+	else if(request.getParameter("idx1").equals("1")) {
+		if(request.getParameter("idx2") == null) {
+			
+		}
+		else if(request.getParameter("idx2").equals("1")) {
+ 			%> <%@ include file="draft_list.jsp"%> <%
  		}
- 		else if (page_id.equals("register_form")) {
-			%> <%@ include file="register_form.jsp"%> <%
+		else if(request.getParameter("idx2").equals("2")) {
+			
+		}
+	}
+	else if(request.getParameter("idx1").equals("2")) {
+		if(request.getParameter("idx2") == null) {
+			
+		}
+		else if(request.getParameter("idx2").equals("1")) {
+ 			%> <%@ include file="employee_list.jsp"%> <%
  		}
- 		else if (page_id.equals("employee_list")) {
-			%> <%@ include file="employee_list.jsp"%> <%
- 		}
- 		else if (page_id.equals("employee_reg")) {
-			%> <%@ include file="employee_reg.jsp"%> <%
+ 		else if(request.getParameter("idx2").equals("2")) {
+ 			%> <%@ include file="register_form.jsp"%> <%			
  		}
 	}
 %>

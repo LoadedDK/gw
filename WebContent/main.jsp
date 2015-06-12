@@ -5,7 +5,7 @@
 <jsp:useBean id="empDAO" class="gw.employee.EmployeeDAO"/>
 <%
 	if(session.getAttribute("id") == null) {
-		response.sendRedirect("login.jsp");
+		response.sendRedirect("login.jsp?error=1");
 	}
 %>
 

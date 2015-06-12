@@ -12,7 +12,7 @@
 
 #top {
 	border: solid;
-	border-size: 2px;
+	border-size: 1px;
 	border-color: #ff0000;
 }
 
@@ -33,7 +33,6 @@
 }
 
 #menu a:link, a:visited {
-	
 	padding: 10px;
 	width: 150px;
 	height: 40px;
@@ -101,11 +100,43 @@
 }
 
 #reg_form table tr th {
-	background-color: #8EB4E3;
-	color: #FFFFFF;
+	background-color: #8eb4e3;
+	color: #ffffff;
 }
 
 #reg_form table tr td {
 	color: #000000;
-	background-color: #D5E3F4;
+	background-color: #d5e3f4;
+}
+
+/*employee_reg*/
+
+#employee_reg {
+	
+}
+
+#employee_reg a {
+	color: #000000;
+}
+
+
+/*employee_list*/
+
+#employee_list {
+	
+}
+
+#employee_list table {
+	border-collapse: collapse;
+	width: 600px;
+}
+
+#employee_list table tr th {
+	background-color: #8eb4e3;
+	color: #ffffff;
+	text-style: bold;
+}
+
+#employee_list table tr td {
+	text-align: center;
 }

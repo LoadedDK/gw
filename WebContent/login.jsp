@@ -12,6 +12,16 @@
 <h2>그룹웨어 시스템</h2>
 <hr>
 
+<%
+	if(request.getParameter("error") == null) {
+		
+	}
+
+	else if(request.getParameter("error").equals("1")) {
+		out.println("로그인을 해야 이용할 수 있습니다.<br><br>");
+	}
+%>
+
 <sns:login />
 
 </div>

@@ -2,7 +2,7 @@
 사원 등록
 <div id="reg_form">
 	<form name="form1" method="post" action="main.jsp?page_id=employee_reg">
-		<table>
+		<table border="1">
 			<tr>
 				<th>사 번</th>
 				<td><input type="text" name="id"></td>
