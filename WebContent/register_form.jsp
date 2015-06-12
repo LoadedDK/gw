@@ -2,7 +2,7 @@
 사원 등록
 <div id="reg_form">
 	<form name="form1" method="post" action="main.jsp?page_id=employee_reg">
-		<table border="1">
+		<table>
 			<tr>
 				<th>사 번</th>
 				<td><input type="text" name="id"></td>
@@ -32,6 +32,10 @@
 				<option value="과장">과장</option>
 				<option value="차장">차장</option>
 				<option value="부장">부장</option>
+				<option value="이사">이사</option>
+				<option value="상무">상무</option>
+				<option value="전무">전무</option>
+				<option value="사장">사장</option>
 				</select></td>
 			</tr>
 			<tr>
