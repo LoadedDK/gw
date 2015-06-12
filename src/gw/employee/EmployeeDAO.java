@@ -39,6 +39,7 @@ public class EmployeeDAO {
 		}
 		finally {
 			try {
+				pstmt.close();
 				conn.close();
 			}
 			catch (SQLException e) {
@@ -102,6 +103,7 @@ public class EmployeeDAO {
 		}
 		finally {
 			try {
+				pstmt.close();
 				conn.close();
 			}
 			catch (SQLException e) {
