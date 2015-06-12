@@ -4,12 +4,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="./\groupware.css" type="text/css" media="screen" />
-<title>Groupware System</title>
+<link rel="stylesheet" href="groupware.css" type="text/css" media="screen" />
+<title>그룹웨어 시스템</title>
 </head>
 <body>
 <div align="center">
-<h2>Groupware System</h2>
+<h2>그룹웨어 시스템</h2>
 <hr>
 
 <sns:login />

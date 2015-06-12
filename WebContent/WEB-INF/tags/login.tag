@@ -10,9 +10,10 @@
 <c:otherwise>
 아 이 디  : 
 	<input type="hidden" name="action" value="login">
-	<input type="text" name="id" size="10">&nbsp&nbsp
+	<input type="text" name="id" size="10"><br><br>
 비밀번호 : 
-	<input type="password" name="pw" size="10">&nbsp&nbsp
+	<input type="password" name="pw" size="10"><br><br>
+
 	<input type="submit" value="로그인">
 </c:otherwise>
 </c:choose>

@@ -1,84 +1,111 @@
 @CHARSET "UTF-8";
 
-html{
-	height: 90%;
+/*main*/
+
+#main {
+	margin: 30px;
+	width: 1200px;
 }
 
-body{
-	text-align : center;
-	background-color: #ffe6bf;
-	height: 100%;
+
+/*topMenu*/
+
+#top {
+	border: solid;
+	border-size: 2px;
+	border-color: #ff0000;
 }
 
-table {
-	width: auto;
+#title {
+	width: 200px;
+	height: 40px;
+	float: left;
+	color: #EDD200;
+	font-size: 20px;
+	font-weight: bold;
+	background-color: #606060;
+	margin-right: 10px;
+	text-align: center;
+}
+
+#menu {
+	padding-bottom: 20px;
+}
+
+#menu a:link, a:visited {
+	
+	padding: 10px;
+	width: 150px;
+	height: 40px;
+	background-color: #606060;
+	color: #ffffff;
+	text-decoration: none;
+}
+#menu a:link, a:visited:hover {
+	background-color: #969696;
+}
+
+/*side_left*/
+
+#side_left {
+	border: solid;
+	border-size: 2px;
+	border-color: #ff0000;
+	
+	width: 200px;
+	height: 700px;
+	padding: 10px;
+}
+
+#side_left ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#side_left ul li a:link, a:visited {
+	align: center;
+	width: 200px;
+	height: 50px;
+	background-color: #606060;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+#side_left ul li:hover {
+	background-color: #969696;
+}
+
+
+/*content*/
+
+#content {
+	border: solid;
+	border-size: 2px;
+	border-color: #ff0000;
+	
+	padding: 10px;
+	height: 700px;
+}
+
+/*register_form*/
+
+#reg_form {
+	
+}
+
+#reg_form table {
 	border-collapse: collapse;
 	border: none;
 	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
 }
 
-td, th {
-	font-size: 10pt;
-	border: none;
-	height: 30px;
-	padding: 5px;
-}
-
-th {
+#reg_form table tr th {
 	background-color: #8EB4E3;
 	color: #FFFFFF;
-	font-family: Georgia;
-	text-style:bold;
 }
 
-tr td {
+#reg_form table tr td {
 	color: #000000;
 	background-color: #D5E3F4;
-}
-
-input {
-	height:25px;
-	width:200px;
-}
-
-input [type="submit"], [type="reset"], [type="button"] {
-	height: 25px;
-	width: 80px;
-	/*background-color: #ff00ff;*/
-}
-input [type="text"] {
-	height: 25px;
-	width: 200px;
-}
-
-
-/*layout*/
-
-#main {
-	/*width: 100%;*/
-	width: 1300px;
-	height: 100%;
-	margin: 0 auto;
-	padding-top: 10px;
-	padding-left: 10px;
-	padding-bottom: 10px;
-	/*background: #00ffff url(images/colbg.png) repeat-y;*/
-	overflow: hidden;
-}
-
-#content {
-	float: clear:left;
-	width: auto;
-	margin-left: 40px;
-	background-color: /*#ff00ff;*/
-}
-
-#sidebar1 {
-	height: 100%;
-	float: left;
-	padding-left: 20px;
-	width: 300px;
-	/*background-color: #ffff00;*/
 }
