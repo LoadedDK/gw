@@ -281,10 +281,9 @@
 }
 
 
-.draft_show_textarea {
+.textarea1 {
 	border: none;
 	outline: none;
 	text-align: top;
 	resize: none;	
-	}
 }
