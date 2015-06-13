@@ -10,7 +10,6 @@
 		response.sendRedirect("login.jsp?error=1");
 	}
 %>
-
 <html>
 <head>
 <link rel="stylesheet" href="groupware.css" type="text/css" media="screen" />
@@ -18,23 +17,18 @@
 <title>그룹웨어 시스템</title>
 </head>
 <body id="main">
-	<table style="width:1200px;">
-		<tr>
-			<td colspan="2">
-				<%@ include file="top.jsp"%>
-			</td>
-		</tr>
-		<tr>
-			<td style="width:200px;">
-				<%@ include file="side_left.jsp"%>
-			</td>
-			<td style="vertical-align: top;">
-				<%@ include file="content.jsp"%>
-			</td>
-		</tr>
-		<tr>
-			<td colspan="2"><%@ include file="bottom.jsp"%></td>
-		</tr>
-	</table>
+	<div id="main_top">
+		<%@ include file="top.jsp"%>
+	</div>
+	<div id="main_side_left">
+		<%@ include file="side_left.jsp"%>
+	</div>
+	<div id="main_content">
+		<%@ include file="content.jsp"%>
+	</div>
+	<div id="main_bottom">
+		<%@ include file="bottom.jsp"%>
+	</div>
+
 </body>
 </html>
