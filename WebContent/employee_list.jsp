@@ -3,7 +3,6 @@
 <link rel="stylesheet" href="groupware.css" type="text/css" media="screen" />
 
 <div id="employee_list">
-사원 목록<br>
 	<table border="1">
 		<tr>
 			<th>사번</th>

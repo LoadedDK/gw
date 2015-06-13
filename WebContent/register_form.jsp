@@ -1,9 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib tagdir="/WEB-INF/tags" prefix="rank"%>
-사원 등록
 <div id="reg_form">
 	<form name="form1" method="post" action="main.jsp?idx1=2&idx2=3">
-		<table >
+		<table border="1">
 			<tr>
 				<th>사 번</th>
 				<td><input type="text" name="id"></td>
