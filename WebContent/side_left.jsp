@@ -19,11 +19,5 @@
 			</ul>
 		</div>
 		<%
-	} else {
-	%>
-	<div id="side_left">
-
-	</div>
-	<%
 	}
 %>

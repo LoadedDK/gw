@@ -1,11 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <div id="content">
 <%
-	if(request.getParameter("idx1").equals("home")) {
-		
-	}
-
-	else if(request.getParameter("idx1").equals("1")) {
+	if(request.getParameter("idx1").equals("1")) {
 		if(request.getParameter("idx2") == null) {
 			
 		}
@@ -36,8 +32,6 @@
  		else if(request.getParameter("idx2").equals("3")) {
  			%> <%@ include file="employee_reg.jsp"%> <%			
  		}
-		
-		
 	}
 %>
 </div>
