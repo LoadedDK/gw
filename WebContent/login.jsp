@@ -8,22 +8,29 @@
 <title>그룹웨어 시스템</title>
 </head>
 <body>
-<div align="center">
-<h2>그룹웨어 시스템</h2>
-<hr>
+	<div id="login">
+		<br><br><h2>그룹웨어 시스템</h2><br><br>
+		<hr>
+		<%
+			if (request.getParameter("error") == null) {
 
-<%
-	if(request.getParameter("error") == null) {
-		
-	}
+			}
 
-	else if(request.getParameter("error").equals("1")) {
-		out.println("로그인을 해야 이용할 수 있습니다.<br><br>");
-	}
-%>
+			else if (request.getParameter("error").equals("1")) {
+				out.println("로그인을 해야 이용할 수 있습니다.<br><br>");
+			}
+		%>
 
-<sns:login />
+		<form name="loginform" method="post" action="user_control.jsp">
+			<input type="hidden" name="action" value="login">
+			아 이 디 : 
+			
+			<input type="text" name="id" size="10"> <br>
+			비밀번호 : <input type="password" name="pw" size="10"> <br> <br>
+			
+			<input type="submit" value="로그인">
+		</form>
 
-</div>
+	</div>
 </body>
 </html>

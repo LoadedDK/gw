@@ -1,5 +1,26 @@
 @CHARSET "UTF-8";
 
+/*login*/
+
+#login {
+	display: block;
+	box-sizing: border-box;
+	
+	width: 500px;
+	height: 250px;
+	text-align: center;
+	vertical-align: middle;
+	
+	position: absolute;
+	left: 50%;
+	
+	margin: 125px 0 0 -250px;
+	
+	border: solid;
+	border-size: 1px;
+}
+
+
 /*main*/
 * {
 	margin: 0;
