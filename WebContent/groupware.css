@@ -249,7 +249,8 @@
 	outline: none;
 	text-align: top;
 	resize: none;
-	}
+}
+
 	
 /*draft_show*/
 
@@ -281,6 +282,67 @@
 }
 
 
+/*draft_edit*/
+
+#draft_edit {
+	
+}
+
+#draft_edit table {
+	border-collapse: collapse;
+	border: none;
+	text-align: center;
+	width: 600px;
+}
+
+#draft_edit table tr th {
+		background-color: #8eb4e3;
+		color: #ffffff;
+		width: 120px;
+		text-align: left;
+		height: 25px;
+		padding-left: 3px;
+}
+
+#draft_edit table tr td {
+		color: #000000;
+		text-align: left;
+		text-align: top;
+		padding-left: 3px;
+}
+
+
+/* draft_delete */
+
+#draft_delete {
+	
+}
+
+#draft_delete table {
+	border-collapse: collapse;
+	border: none;
+	text-align: center;
+	width: 600px;
+}
+
+#draft_delete table tr th {
+		background-color: #8eb4e3;
+		color: #ffffff;
+		width: 120px;
+		text-align: left;
+		height: 25px;
+		padding-left: 3px;
+}
+
+#draft_delete table tr td {
+		color: #000000;
+		text-align: left;
+		text-align: top;
+		padding-left: 3px;
+}
+
+
+/*common*/
 .textarea1 {
 	border: none;
 	outline: none;

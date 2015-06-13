@@ -35,9 +35,8 @@ dftDAO.setDraftList();
 		</table>
 		
 		<input type="hidden" name="drafter" value=<%=e.getId()%> >
-		<input type="hidden" name="from" value="write" >
 		<br>
-		<input type="submit" value="글 작성" style="width: 80px;">&nbsp&nbsp
+		<input type="submit" value="글 작성" style="width: 80px;">&nbsp;&nbsp;
 		<input type="button" value="취소" style="width: 80px;" onclick="javascript_: location.href='main.jsp?idx1=1&idx2=1';">
 	</form>
 </div>

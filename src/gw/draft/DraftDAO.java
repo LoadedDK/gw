@@ -94,6 +94,71 @@ public class DraftDAO {
 		return true;
 	}
 	
+	public boolean edit(String title, String content, int draft) {
+		conn = DBConn.connect();
+		try {
+			
+			String query = "UPDATE draft SET title=?, content=? WHERE draft=?";
+			//String query = "INSERT INTO draft (title, content, drafter ,draftername, filepath, issign, regtime) VALUES (?, ?, ?, ?, ?, 'N', NOW())";
+			pstmt = conn.prepareStatement(query);
+			pstmt.setString(1, title);
+			pstmt.setString(2, content);
+			pstmt.setInt(3, draft);
+			pstmt.executeQuery();
+			
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			System.out.println(e);
+			return false;
+		}
+		finally {
+			try {
+				pstmt.close();
+				conn.close();
+			}
+			catch (SQLException e) {
+				System.out.println("close");
+				e.printStackTrace();
+			}
+		}
+		return true;
+	}
+	
+	public boolean delete(Draft draft) {
+		conn = DBConn.connect();
+		try {
+			
+			String query = "INSERT INTO draft (title, content, drafter ,draftername, issign, regtime) VALUES (?, ?, ?, ?, 'N', NOW())";
+			//String query = "INSERT INTO draft (title, content, drafter ,draftername, filepath, issign, regtime) VALUES (?, ?, ?, ?, ?, 'N', NOW())";
+			pstmt = conn.prepareStatement(query);
+			
+			pstmt.setString(1, draft.getTitle());
+			pstmt.setString(2, draft.getContent());
+			pstmt.setInt(3, draft.getDrafter());
+			pstmt.setString(4, draft.getDraftername());
+			//pstmt.setString(2, draft.getFilepath());
+			
+			pstmt.executeUpdate();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			System.out.println(e);
+			return false;
+		}
+		finally {
+			try {
+				pstmt.close();
+				conn.close();
+			}
+			catch (SQLException e) {
+				System.out.println("close");
+				e.printStackTrace();
+			}
+		}
+		return true;
+	}
+	
 	
 	
 	//DB에서 리스트로 기안 리스트 땡겨옴
