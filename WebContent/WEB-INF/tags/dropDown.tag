@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ attribute name="name" %>
 
-<select style="width:150px;" name="${name}">
+<select style="width:170px;" name="${name}">
 <c:choose>
 <c:when test="${name == 'rank'}">
 				<option value="인턴">인턴</option>

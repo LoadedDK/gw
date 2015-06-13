@@ -244,7 +244,13 @@
 		height: 25px;
 		padding-left: 3px;
 	}
-
+	
+.draft_write_textarea {
+	border: none;
+	outline: none;
+	text-align: top;
+	resize: none;
+	}
 	
 /*draft_show*/
 
@@ -260,10 +266,26 @@
 }
 
 #draft_show table tr th {
-	background-color: #8eb4e3;
-	color: #ffffff;
+		background-color: #8eb4e3;
+		color: #ffffff;
+		width: 120px;
+		text-align: left;
+		height: 25px;
+		padding-left: 3px;
 }
 
 #draft_show table tr td {
-	color: #000000;
+		color: #000000;
+		text-align: left;
+		text-align: top;
+		padding-left: 3px;
+}
+
+
+.draft_show_textarea {
+	border: none;
+	outline: none;
+	text-align: top;
+	resize: none;	
+	}
 }

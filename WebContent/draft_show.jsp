@@ -16,7 +16,7 @@
 		int draftNum = Integer.parseInt(request.getParameter("draft"));
 		dft = dftDAO.show(draftNum);
 		if(dft == null) {
-			out.println("널이다!!!!");	
+			out.println("널!!!널이다!!!!");	
 	}
 	}
 %>
@@ -35,12 +35,14 @@
 			<th colspan="2" align="center">내용</th>
 		</tr>
 		<tr>
-			<td colspan="2" align="center"><%=dft.getContent()%></td>
+			<td colspan="2" height="310px" > <textarea class="draft_show_textarea" cols="90" rows="20" name="content" readOnly><%=dft.getContent()%></textarea></td>
 		</tr>
 		
 	</table>
 	<br /><br />
+	<input type="button" value="수정" onclick="javascript_: location.href='main.jsp?idx1=1&idx2=1';">
 	<input type="button" value="목록" onclick="javascript_: location.href='main.jsp?idx1=1&idx2=1';">
+	<input type="button" value="삭제" onclick="javascript_: location.href='main.jsp?idx1=1&idx2=1';">
 </div>
 
 </body>

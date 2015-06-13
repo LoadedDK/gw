@@ -34,7 +34,7 @@
 		
 	</table>
 </div>
-<br /><br />
+<br />
 <button onclick="javascript_: location.href='main.jsp?idx1=1&idx2=2';">글쓰기</button>
 </body>
 </html>
