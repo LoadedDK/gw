@@ -11,9 +11,11 @@
 /*topMenu*/
 
 #top {
+	width: 1200px;
+	height: 80px;
 	border: solid;
 	border-size: 1px;
-	border-color: #ff0000;
+	border-color: #000000;
 }
 
 #title {
@@ -29,7 +31,8 @@
 }
 
 #menu {
-	padding-bottom: 20px;
+	margin-top: 10px;
+	
 }
 
 #menu a:link, a:visited {
@@ -41,7 +44,7 @@
 	text-decoration: none;
 }
 #menu a:link, a:visited:hover {
-	background-color: #969696;
+	background-color: red;
 }
 
 /*side_left*/
@@ -60,6 +63,14 @@
 	list-style: none;
 	padding: 0;
 	margin: 0;
+}
+
+#side_left ul li {
+	align: center;
+	width: 200px;
+	height: 50px;
+	background-color: #606060;
+	color: #ffffff;
 }
 
 #side_left ul li a:link, a:visited {
@@ -139,4 +150,81 @@
 
 #employee_list table tr td {
 	text-align: center;
+}
+
+/*draft_list*/
+
+#draft_list {
+	
+}
+
+#draft_list table {
+	border-collapse: collapse;
+	width: 600px;
+}
+
+#draft_list table tr th {
+	background-color: #8eb4e3;
+	color: #ffffff;
+	text-style: bold;
+}
+
+#draft_list table tr td {
+	text-align: center;
+}
+
+
+/*draft_write*/
+
+#draft_write {
+	
+}
+
+#draft_write table {
+	border-collapse: collapse;
+	border: none;
+	text-align: center;
+	width: 600px;
+	
+}
+
+#draft_write table tr th {
+	background-color: #8eb4e3;
+	color: #ffffff;
+	width: auto;
+}
+
+#draft_write table tr td {
+	color: #000000;
+	margin: 10px;
+	padding: 3px;
+	text-align: left;
+}
+#draft_write input [type="submit"], [type="reset"], [type="button"] {
+	width: 80px;
+}
+input [type="text"] {
+	width: 100%;
+}
+
+/*draft_show*/
+
+#draft_show {
+	
+}
+
+#draft_show table {
+	border-collapse: collapse;
+	border: none;
+	text-align: center;
+	width: 600px;
+}
+
+#draft_show table tr th {
+	background-color: #8eb4e3;
+	color: #ffffff;
+}
+
+#draft_show table tr td {
+	color: #000000;
 }

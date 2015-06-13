@@ -1,11 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
 <%
 	if(request.getParameter("idx1").equals("1")) {
 		%>
 		<div id="side_left">
 			<ul>
-				<li><a href="main.jsp?idx1=1&idx2=1">draft1</a></li>
+				<li><a href="main.jsp?idx1=1&idx2=1">기안 / 결재</a></li>
 				<li><a href="main.jsp?idx1=1&idx2=2">draft2</a></li>
 			</ul>
 		</div>
@@ -20,5 +19,11 @@
 			</ul>
 		</div>
 		<%
+	} else {
+	%>
+	<div id="side_left">
+
+	</div>
+	<%
 	}
 %>

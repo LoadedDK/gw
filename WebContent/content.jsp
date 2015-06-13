@@ -13,12 +13,19 @@
  			%> <%@ include file="draft_list.jsp"%> <%
  		}
 		else if(request.getParameter("idx2").equals("2")) {
-			
+			%> <%@ include file="draft_write.jsp"%> <%
 		}
+		else if(request.getParameter("idx2").equals("3")) {
+			%> <%@ include file="draft_write_result.jsp"%> <%
+		}
+		else if(request.getParameter("idx2").equals("4")) {
+			%> <%@ include file="draft_show.jsp"%> <%
+		}
+		
 	}
 	else if(request.getParameter("idx1").equals("2")) {
 		if(request.getParameter("idx2") == null) {
-			
+
 		}
 		else if(request.getParameter("idx2").equals("1")) {
  			%> <%@ include file="employee_list.jsp"%> <%
@@ -26,6 +33,11 @@
  		else if(request.getParameter("idx2").equals("2")) {
  			%> <%@ include file="register_form.jsp"%> <%			
  		}
+ 		else if(request.getParameter("idx2").equals("3")) {
+ 			%> <%@ include file="employee_reg.jsp"%> <%			
+ 		}
+		
+		
 	}
 %>
 </div>

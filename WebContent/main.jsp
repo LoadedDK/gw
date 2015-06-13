@@ -3,6 +3,8 @@
 <% request.setCharacterEncoding("UTF-8"); %>
 <jsp:useBean id="emp" class="gw.employee.Employee"/>
 <jsp:useBean id="empDAO" class="gw.employee.EmployeeDAO"/>
+<jsp:useBean id="dft" class="gw.draft.Draft"/>
+<jsp:useBean id="dftDAO" class="gw.draft.DraftDAO"/>
 <%
 	if(session.getAttribute("id") == null) {
 		response.sendRedirect("login.jsp?error=1");

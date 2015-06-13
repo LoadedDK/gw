@@ -9,5 +9,5 @@
 	사번 : <jsp:getProperty property="id" name="emp" /><br>
 	이름 : <%=emp.getName()%><br>
 	사원등록이 완료되었습니다.<br>
-	<a href="main.jsp?page_id=employee_list">사원목록</a>
+	<a href="main.jsp?idx1=2&idx2=1">사원목록</a>
 </div>
