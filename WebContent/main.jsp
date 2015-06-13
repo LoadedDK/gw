@@ -29,6 +29,5 @@
 	<div id="main_bottom">
 		<%@ include file="bottom.jsp"%>
 	</div>
-
 </body>
 </html>
