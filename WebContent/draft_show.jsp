@@ -35,7 +35,7 @@
 			<th colspan="2" align="center">내용</th>
 		</tr>
 		<tr>
-			<td colspan="2" height="310px" > <textarea class="draft_show_textarea" cols="90" rows="20" name="content" readOnly><%=dft.getContent()%></textarea></td>
+			<td colspan="2" height="310px" > <textarea class="textarea1" cols="90" rows="20" name="content" readOnly><%=dft.getContent()%></textarea></td>
 		</tr>
 		
 	</table>

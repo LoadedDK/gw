@@ -30,7 +30,7 @@ dftDAO.setDraftList();
 				<th colspan="2" align="center">내&nbsp;&nbsp;&nbsp;용</th>
 			</tr>
 			<tr>
-				<td colspan="2" align="center"><textarea class="draft_write_textarea" cols="90" rows="20" name="content"></textarea></td>
+				<td colspan="2" align="center"><textarea class="extarea1" cols="90" rows="20" name="content"></textarea></td>
 			</tr>
 		</table>
 		
