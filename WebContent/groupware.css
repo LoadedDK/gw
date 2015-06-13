@@ -35,7 +35,7 @@
 	
 }
 
-#menu a:link, a:visited {
+#menu a:link, #menu a:visited {
 	padding: 10px;
 	width: 150px;
 	height: 40px;
@@ -43,8 +43,8 @@
 	color: #ffffff;
 	text-decoration: none;
 }
-#menu a:link, a:visited:hover {
-	background-color: red;
+#menu a:link, #menu a:visited:hover {
+	background-color: blue;'
 }
 
 /*side_left*/
@@ -73,11 +73,10 @@
 	color: #ffffff;
 }
 
-#side_left ul li a:link, a:visited {
+#side_left ul li a:link, #side_left ul li a:visited {
 	align: center;
 	width: 200px;
 	height: 50px;
-	background-color: #606060;
 	color: #ffffff;
 	text-decoration: none;
 }
