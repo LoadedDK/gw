@@ -21,7 +21,7 @@
 		if(empDAO.login(emp.getId(),emp.getPw())) {
 			// 로그인 성공시 세션에 "id" 저장
 			session.setAttribute("id",emp.getId());
-			response.sendRedirect("main.jsp?idx1=home");
+			response.sendRedirect("main.jsp?idx1=1");
 		}
 		else {
 			out.println("<script>alert('아이디나 비밀번호가 틀렸습니다.!!');history.go(-1);</script>");
