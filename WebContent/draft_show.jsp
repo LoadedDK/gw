@@ -50,14 +50,16 @@
 			<th colspan="2" align="center">내&nbsp;&nbsp;&nbsp;용</th>
 		</tr>
 		<tr>
-			<td colspan="2" height="310px" > <textarea class="textarea1" cols="90" rows="20" name="content" readOnly><%=dft.getContent()%></textarea></td>
+			<td colspan="2" height="310px" > <textarea class="textarea1" cols="90" rows="10" name="content" readOnly><%=dft.getContent()%></textarea></td>
 		</tr>
 		
 	</table>
-	<br><br>
-	<input type="button" value="수정" onclick="javascript_: location.href='main.jsp?idx1=1&idx2=5&draft=<%=draftNum%>';">
-	<input type="button" value="목록" onclick="javascript_: location.href='main.jsp?idx1=1&idx2=1';">
-	<input type="button" value="삭제" onclick="javascript_: location.href='main.jsp?idx1=1&idx2=6&draft=<%=draftNum%>';">
+	<br>
+	<center>
+	<input type="button" value="수정" style="width: 80px;" onclick="javascript_: location.href='main.jsp?idx1=1&idx2=5&draft=<%=draftNum%>';">&nbsp;&nbsp;
+	<input type="button" value="목록" style="width: 80px;" onclick="javascript_: location.href='main.jsp?idx1=1&idx2=1';">&nbsp;&nbsp;
+	<input type="button" value="삭제" style="width: 80px;" onclick="javascript_: location.href='main.jsp?idx1=1&idx2=6&draft=<%=draftNum%>';">
+	</center>
 </div>
 
 </body>

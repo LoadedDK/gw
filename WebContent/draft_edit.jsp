@@ -38,9 +38,12 @@
 			<td colspan="2" height="310px" > <textarea class="textarea1" cols="90" rows="20" name="content"><%=dft.getContent()%></textarea></td>
 		</tr>
 	</table>
+	<br>
+	<center>
 	<input type="hidden" name="from" value="edit">
 	<input type="submit" value="수정 완료" style="width: 80px;">&nbsp;&nbsp;
 	<input type="button" value="취소" style="width: 80px;" onclick="javascript_: location.href='main.jsp?idx1=1&idx2=4&draft=<%=draftNum%>';">
+	</center>
 </form>
 	
 </div>

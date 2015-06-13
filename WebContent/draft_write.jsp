@@ -30,15 +30,17 @@ dftDAO.setDraftList();
 				<th colspan="2" align="center">내&nbsp;&nbsp;&nbsp;용</th>
 			</tr>
 			<tr>
-				<td colspan="2" align="center"><textarea class="extarea1" cols="90" rows="20" name="content"></textarea></td>
+				<td colspan="2" align="center"><textarea class="textarea1" cols="90" rows="20" name="content"></textarea></td>
 			</tr>
 		</table>
 		
 		<input type="hidden" name="drafter" value=<%=e.getId()%> >
 		<input type="hidden" name="from" value="write" >
 		<br>
-		<input type="submit" value="글 작성" style="width: 80px;">&nbsp&nbsp
+		<center>
+		<input type="submit" value="글 작성" style="width: 80px;">&nbsp;&nbsp;
 		<input type="button" value="취소" style="width: 80px;" onclick="javascript_: location.href='main.jsp?idx1=1&idx2=1';">
+		</center>
 	</form>
 </div>
 

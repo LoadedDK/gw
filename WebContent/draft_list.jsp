@@ -26,15 +26,16 @@
 
 			<tr onclick="javascript_: location.href='main.jsp?idx1=1&idx2=4&draft=<%=d.getDraft()%>';">
 				<td><%=d.getDraft() %> </td>
-				<td><%=d.getTitle() %> </td>
+				<td style="text-align: left; width: 350px;"><%=d.getTitle() %> </td>
 				<td><%=d.getDraftername() %> </td>
-				<td><%=d.getRegtime() %> </td>
+				<td style="font-size: 12px;'"><%=d.getRegtime() %> </td>
 			</tr>
 		<% } %>
 		
 	</table>
+	<br>
+	<center><button style="width: 80px;" onclick="javascript_: location.href='main.jsp?idx1=1&idx2=2';">글쓰기</button></center>
 </div>
-<br />
-<button onclick="javascript_: location.href='main.jsp?idx1=1&idx2=2';">글쓰기</button>
+
 </body>
 </html>
