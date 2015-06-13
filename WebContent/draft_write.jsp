@@ -16,7 +16,7 @@ dftDAO.setDraftList();
 <% gw.employee.Employee e = empDAO.getEmployee(Integer.parseInt(session.getAttribute("id").toString())); %>
 
 <div id="draft_write">
-	<form name="form1" method="post" action="main.jsp?idx1=1&idx2=3">
+	<form name="form1" method="post" action="main.jsp?idx1=1&idx2=4&draft=0">
 		<table border="1">
 			<tr>
 				<th>제&nbsp;&nbsp;&nbsp;목</th>

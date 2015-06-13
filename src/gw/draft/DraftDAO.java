@@ -19,7 +19,7 @@ public class DraftDAO {
 		conn = DBConn.connect();
 		try {
 			
-			String query = "SELECT * FROM draft WHERE draft=?";
+			String query = "SELECT * FROM draft WHERE draft=? AND isdel='N'";
 			pstmt = conn.prepareStatement(query);
 			pstmt.setInt(1, draftNum);
 			ResultSet rs = pstmt.executeQuery();
@@ -57,22 +57,18 @@ public class DraftDAO {
 	}
 	
 	
-	
-	
-	
 	public boolean write(Draft draft) {
 		conn = DBConn.connect();
 		try {
 			
 			String query = "INSERT INTO draft (title, content, drafter ,draftername, issign, regtime) VALUES (?, ?, ?, ?, 'N', NOW())";
-			//String query = "INSERT INTO draft (title, content, drafter ,draftername, filepath, issign, regtime) VALUES (?, ?, ?, ?, ?, 'N', NOW())";
+			
 			pstmt = conn.prepareStatement(query);
 			
 			pstmt.setString(1, draft.getTitle());
 			pstmt.setString(2, draft.getContent());
 			pstmt.setInt(3, draft.getDrafter());
 			pstmt.setString(4, draft.getDraftername());
-			//pstmt.setString(2, draft.getFilepath());
 			
 			pstmt.executeUpdate();
 		}
@@ -99,11 +95,13 @@ public class DraftDAO {
 		try {
 			
 			String query = "UPDATE draft SET title=?, content=? WHERE draft=?";
-			//String query = "INSERT INTO draft (title, content, drafter ,draftername, filepath, issign, regtime) VALUES (?, ?, ?, ?, ?, 'N', NOW())";
+
 			pstmt = conn.prepareStatement(query);
+			
 			pstmt.setString(1, title);
 			pstmt.setString(2, content);
 			pstmt.setInt(3, draft);
+			
 			pstmt.executeQuery();
 			
 		}
@@ -125,21 +123,15 @@ public class DraftDAO {
 		return true;
 	}
 	
-	public boolean delete(Draft draft) {
+	public boolean delete(int draft) {
 		conn = DBConn.connect();
 		try {
 			
-			String query = "INSERT INTO draft (title, content, drafter ,draftername, issign, regtime) VALUES (?, ?, ?, ?, 'N', NOW())";
+			String query = "UPDATE draft SET isdel='Y' WHERE draft=?";
 			//String query = "INSERT INTO draft (title, content, drafter ,draftername, filepath, issign, regtime) VALUES (?, ?, ?, ?, ?, 'N', NOW())";
 			pstmt = conn.prepareStatement(query);
-			
-			pstmt.setString(1, draft.getTitle());
-			pstmt.setString(2, draft.getContent());
-			pstmt.setInt(3, draft.getDrafter());
-			pstmt.setString(4, draft.getDraftername());
-			//pstmt.setString(2, draft.getFilepath());
-			
-			pstmt.executeUpdate();
+			pstmt.setInt(1, draft);
+			pstmt.executeQuery();
 		}
 		catch(Exception e) {
 			e.printStackTrace();
@@ -165,7 +157,7 @@ public class DraftDAO {
 	public void setDraftList() {
 		conn = DBConn.connect();
 		try {
-			String query = "SELECT * FROM draft ORDER BY draft DESC";
+			String query = "SELECT * FROM draft WHERE isdel='N' ORDER BY draft DESC";
 			pstmt = conn.prepareStatement(query);
 			ResultSet rs = pstmt.executeQuery(query);
 			
