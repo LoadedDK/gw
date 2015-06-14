@@ -49,7 +49,7 @@
 			<th colspan="2" align="center">내&nbsp;&nbsp;&nbsp;용</th>
 		</tr>
 		<tr>
-			<td colspan="2" height="310px" > <textarea class="textarea2" cols="90" rows="20" name="content" readOnly><%=dft.getContent()%></textarea></td>
+			<td colspan="2" height="310px" > <textarea class="textarea1" cols="90" rows="20" name="content" readOnly><%=dft.getContent()%></textarea></td>
 		</tr>
 		<tr>
 			<th>결재자</th>
