@@ -31,6 +31,12 @@
 				<td style="font-size: 12px;'"><%=d.getRegtime() %> </td>
 			</tr>
 		<% } %>
+		<% if(boardDAO.getBoardList().toString().equals("[]")) { %>
+				<tr>
+					<td colspan="4" style="text-align:center;'"> 게시글이 없습니다. </td>
+				</tr>
+		<% } %>
+
 		
 	</table>
 	<br>

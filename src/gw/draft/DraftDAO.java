@@ -34,9 +34,10 @@ public class DraftDAO {
 			draft.setDraftername(rs.getString("draftername"));
 			draft.setSigner(rs.getInt("signer"));
 			draft.setSignername(rs.getString("signername"));
-			draft.setIssign(rs.getBoolean("issign"));
+			draft.setIssign(rs.getString("issign"));
 			draft.setRegtime(rs.getString("regtime"));
 			draft.setRegtime(rs.getString("signtime"));
+			draft.setDepname(rs.getString("depname"));
 			return draft;
 		}
 		catch(Exception e) {
@@ -154,18 +155,20 @@ public class DraftDAO {
 	
 	
 	//DB에서 리스트로 기안 리스트 땡겨옴
-	public void setDraftList() {
+	public void setDraftList(String depname) {
 		conn = DBConn.connect();
 		try {
-			String query = "SELECT * FROM draft WHERE isdel='N' ORDER BY draft DESC";
+			String query = "SELECT * FROM draft WHERE depname=? AND isdel='N' ORDER BY draft DESC";
 			pstmt = conn.prepareStatement(query);
-			ResultSet rs = pstmt.executeQuery(query);
+			pstmt.setString(1, depname);
+			ResultSet rs = pstmt.executeQuery();
 			
 			while(rs.next()) {
 				Draft draft = new Draft();
 				draft.setDraft(rs.getInt("draft"));
 				draft.setTitle(rs.getString("title"));
 				draft.setDraftername(rs.getString("draftername"));
+				draft.setIssign(rs.getString("issign"));
 				draft.setRegtime(rs.getString("regtime"));
 				addList(draft);
 			}

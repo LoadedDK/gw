@@ -10,9 +10,10 @@ public class Draft {
 	private 	String draftername;
 	private int signer;
 	private String signername;
-	private boolean issign;
+	private String issign;
 	private String regtime;
 	private 	String signtime;
+	private String depname;
 	
 	public int getDraft() {
 		return draft;
@@ -77,15 +78,15 @@ public class Draft {
 	public void setSignername(String signername) {
 		this.signername = signername;
 	}
-	
-	public boolean isIssign() {
+
+	public String getIssign() {
 		return issign;
 	}
-	
-	public void setIssign(boolean issign) {
+
+	public void setIssign(String issign) {
 		this.issign = issign;
 	}
-	
+
 	public String getRegtime() {
 		return regtime;
 	}
@@ -101,4 +102,13 @@ public class Draft {
 	public void setSigntime(String signtime) {
 		this.signtime = signtime;
 	}
+
+	public String getDepname() {
+		return depname;
+	}
+
+	public void setDepname(String depname) {
+		this.depname = depname;
+	}
+
 }

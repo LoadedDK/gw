@@ -8,6 +8,7 @@
 <title>기안 작성</title>
 </head>
 <body>
+<div id="board_delete">
 <%
 	int boardNum = 1;
 	if(request.getParameter("board") == null) {
@@ -22,6 +23,7 @@
 게시물이 삭제되었습니다.<br><br>
 <input type="button" value="확인" style="width: 80px;" onclick="javascript_: location.href='main.jsp?idx1=3&idx2=1';">
 </center>
+</div>
 
 </body>
 </html>

@@ -221,7 +221,7 @@
 /*draft_list*/
 
 #draft_list {
-	
+	width: 600px;
 }
 
 #draft_list table {
@@ -243,7 +243,7 @@
 /*draft_write*/
 
 #draft_write {
-	
+	width: 600px;
 }
 
 #draft_write table {
@@ -277,20 +277,20 @@
 }
 
 	
-/*draft_show*/
+/*draft_read*/
 
-#draft_show {
-	
+#draft_read {
+	width: 600px;
 }
 
-#draft_show table {
+#draft_read table {
 	border-collapse: collapse;
 	border: none;
 	text-align: center;
 	width: 600px;
 }
 
-#draft_show table tr th {
+#draft_read table tr th {
 		background-color: #8eb4e3;
 		color: #ffffff;
 		width: 120px;
@@ -299,7 +299,7 @@
 		padding-left: 3px;
 }
 
-#draft_show table tr td {
+#draft_read table tr td {
 		color: #000000;
 		text-align: left;
 		text-align: top;
@@ -310,7 +310,7 @@
 /*draft_edit*/
 
 #draft_edit {
-	
+	width: 600px;
 }
 
 #draft_edit table {
@@ -340,7 +340,7 @@
 /* draft_delete */
 
 #draft_delete {
-	
+	width: 600px;
 }
 
 #draft_delete table {
@@ -370,7 +370,7 @@
 /*board_list*/
 
 #board_list {
-	
+	width: 600px;
 }
 
 #board_list table {
@@ -392,7 +392,7 @@
 /*board_write*/
 
 #board_write {
-	
+	width: 600px;
 }
 
 #board_write table {
@@ -426,20 +426,20 @@
 }
 
 	
-/*board_show*/
+/*board_read*/
 
-#board_show {
-	
+#board_read {
+	width: 600px;
 }
 
-#board_show table {
+#board_read table {
 	border-collapse: collapse;
 	border: none;
 	text-align: center;
 	width: 600px;
 }
 
-#board_show table tr th {
+#board_read table tr th {
 		background-color: #8eb4e3;
 		color: #ffffff;
 		width: 120px;
@@ -448,7 +448,7 @@
 		padding-left: 3px;
 }
 
-#board_show table tr td {
+#board_read table tr td {
 		color: #000000;
 		text-align: left;
 		text-align: top;
@@ -459,7 +459,7 @@
 /*board_edit*/
 
 #board_edit {
-	
+	width: 600px;
 }
 
 #board_edit table {
@@ -489,7 +489,7 @@
 /* board_delete */
 
 #board_delete {
-	
+	width: 600px;
 }
 
 #board_delete table {

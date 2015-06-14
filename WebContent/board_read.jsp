@@ -16,7 +16,6 @@
 		response.sendRedirect("main.jsp?idx1=3&idx2=1");
 	}
 	else if(request.getParameter("board").equals("0")) {
-		out.println("롸잇!!!");
 		boardDAO.write(board);
 	}
 	else {
@@ -24,7 +23,6 @@
 		if(request.getParameter("from") == null) {
 		}
 		else if(request.getParameter("from").equals("edit")) {
-			out.println("에딧!!!");
 			title = request.getParameter("title");
 			content = request.getParameter("content");
 			boardDAO.edit(title, content, boardNum);
@@ -35,7 +33,7 @@
 		}
 	}
 %>
-<div id="board_show">
+<div id="board_read">
 	<table border="1">
 	
 		<tr>
@@ -50,7 +48,7 @@
 			<th colspan="2" align="center">내&nbsp;&nbsp;&nbsp;용</th>
 		</tr>
 		<tr>
-			<td colspan="2" height="310px" > <textarea class="textarea1" cols="90" rows="10" name="content" readOnly><%=board.getContent()%></textarea></td>
+			<td colspan="2" height="310px" > <textarea class="textarea2" cols="90" rows="20" name="content" readOnly><%=board.getContent()%></textarea></td>
 		</tr>
 		
 	</table>
