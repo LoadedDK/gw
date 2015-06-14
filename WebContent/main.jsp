@@ -13,6 +13,9 @@
 	}
 %>
 <html>
+<style type="text/css">
+	html {height:100%;}
+</style>
 <head>
 <link rel="stylesheet" href="groupware.css" type="text/css" media="screen" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -27,9 +30,9 @@
 	</div>
 	<div id="main_content">
 		<%@ include file="content.jsp"%>
-	</div>
-	<div id="main_bottom">
-		<%@ include file="bottom.jsp"%>
+		<div id="main_bottom">
+			<%@ include file="bottom.jsp"%>
+		</div>
 	</div>
 </body>
 </html>

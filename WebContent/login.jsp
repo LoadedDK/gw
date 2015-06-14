@@ -15,12 +15,10 @@
 			if (request.getParameter("error") == null) {
 
 			}
-
 			else if (request.getParameter("error").equals("1")) {
 				out.println("로그인을 해야 이용할 수 있습니다.<br><br>");
 			}
 		%>
-
 		<form name="loginform" method="post" action="user_control.jsp">
 			<input type="hidden" name="action" value="login">
 			아 이 디 : 
