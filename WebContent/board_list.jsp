@@ -24,9 +24,9 @@
 				
 		<% for(gw.board.Board d : boardDAO.getBoardList()) { %>
 
-			<tr onclick="javascript_: location.href='main.jsp?idx1=3&idx2=3&board=<%=d.getBoard()%>';">
+			<tr>
 				<td><%=d.getBoard() %> </td>
-				<td style="text-align: left; width: 350px;"><%=d.getTitle() %> </td>
+				<td style="text-align: left; width: 350px;" onclick="javascript_: location.href='main.jsp?idx1=3&idx2=3&board=<%=d.getBoard()%>';"><%=d.getTitle() %> </td>
 				<td><%=d.getWritername() %> </td>
 				<td style="font-size: 12px;'"><%=d.getRegtime() %> </td>
 			</tr>

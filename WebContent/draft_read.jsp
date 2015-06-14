@@ -52,7 +52,7 @@
 			<td colspan="2" height="310px" > <textarea class="textarea1" cols="90" rows="20" name="content" readOnly><%=dft.getContent()%></textarea></td>
 		</tr>
 		<tr>
-			<th>결재자</th>
+			<th>결재권자</th>
 			<td><%=dft.getDraftername()%></td>
 		</tr>
 		

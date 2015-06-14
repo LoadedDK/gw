@@ -378,15 +378,15 @@
 	width: 600px;
 }
 
-#board_list table tr th {
-	background-color: #8eb4e3;
-	color: #ffffff;
-	text-style: bold;
-}
-
-#board_list table tr td {
-	text-align: center;
-}
+	#board_list table tr th {
+		background-color: #8eb4e3;
+		color: #ffffff;
+		text-style: bold;
+	}
+	
+	#board_list table tr td {
+		text-align: center;
+	}
 
 
 /*board_write*/
@@ -515,6 +515,26 @@
 		padding-left: 3px;
 }
 
+#mypage table {
+	border-collapse: collapse;
+	width: 400px;
+	text-align: center;
+}
+
+	#mypage table tr th {
+		border-collapse: collapse;
+		background-color: #8eb4e3;
+		color: #ffffff;
+		text-style: bold;
+		text-align: center;
+	}
+
+	#mypage table tr td {
+		color: #000000;
+		text-align: left;
+		padding-left: 3px;
+	}
+	
 
 /*common*/
 .textarea1 {

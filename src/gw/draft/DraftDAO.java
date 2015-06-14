@@ -91,6 +91,38 @@ public class DraftDAO {
 		return true;
 	}
 	
+	public Draft findSigner(String depname) {
+		conn = DBConn.connect();
+		try {
+			
+			String query = "SELECT * FROM employee WHERE depname=? AND rank='이사'";
+			pstmt = conn.prepareStatement(query);
+			pstmt.setString(1, depname);
+			ResultSet rs = pstmt.executeQuery();
+			
+			rs.next();
+			String id = rs.getString("id");
+			String name = rs.getString("name");
+			
+			
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			System.out.println(e);
+			return null;
+		}
+		finally {
+			try {
+				pstmt.close();
+				conn.close();
+			}
+			catch (SQLException e) {
+				System.out.println("close");
+				e.printStackTrace();
+			}
+		}
+	}
+	
 	public boolean edit(String title, String content, int draft) {
 		conn = DBConn.connect();
 		try {
