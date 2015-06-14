@@ -33,25 +33,32 @@
 #main_top {
 	display: block;
 	box-sizing: border-box;
+	position: relative;
 }
 
 #main_side_left {
 	display: block;
 	box-sizing: border-box;
 	float: left;
+	height: 100%;
+	padding-top: 40px;
+	margin-top: -40px;
 }
 
 #main_content {
 	display: block;
 	box-sizing: border-box;
-	padding: 5px;
+	height: 100%;
 	padding-left: 205px;
+	padding-top: 45px;
+	margin-top: -40px;
 }
 
 #main_bottom {
 	display: block;
 	box-sizing: border-box;
-	padding-top: 20px;
+	height: 21px;
+	margin-top: -21px; //밑으로 삐쳐나가는거 땡겨올림
 }
 
 
