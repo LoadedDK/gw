@@ -12,15 +12,12 @@
 			%> <%@ include file="draft_write.jsp"%> <%
 		}
 		else if(request.getParameter("idx2").equals("3")) {
-			%> <%@ include file="draft_write_result.jsp"%> <%
+			%> <%@ include file="draft_read.jsp"%> <%
 		}
 		else if(request.getParameter("idx2").equals("4")) {
-			%> <%@ include file="draft_show.jsp"%> <%
-		}
-		else if(request.getParameter("idx2").equals("5")) {
 			%> <%@ include file="draft_edit.jsp"%> <%
 		}
-		else if(request.getParameter("idx2").equals("6")) {
+		else if(request.getParameter("idx2").equals("5")) {
 			%> <%@ include file="draft_delete.jsp"%> <%
 		}
 		

@@ -29,7 +29,7 @@
 			content = request.getParameter("content");
 			dftDAO.edit(title, content, draftNum);
 		}
-		dft = dftDAO.show(draftNum);
+		dft = dftDAO.read(draftNum);
 		if(dft == null) {
 			out.println("널!!!널이다!!!!");	
 		}
@@ -56,9 +56,9 @@
 	</table>
 	<br>
 	<center>
-	<input type="button" value="수정" style="width: 80px;" onclick="javascript_: location.href='main.jsp?idx1=1&idx2=5&draft=<%=draftNum%>';">&nbsp;&nbsp;
+	<input type="button" value="수정" style="width: 80px;" onclick="javascript_: location.href='main.jsp?idx1=1&idx2=4&draft=<%=draftNum%>';">&nbsp;&nbsp;
 	<input type="button" value="목록" style="width: 80px;" onclick="javascript_: location.href='main.jsp?idx1=1&idx2=1';">&nbsp;&nbsp;
-	<input type="button" value="삭제" style="width: 80px;" onclick="javascript_: location.href='main.jsp?idx1=1&idx2=6&draft=<%=draftNum%>';">
+	<input type="button" value="삭제" style="width: 80px;" onclick="javascript_: location.href='main.jsp?idx1=1&idx2=5&draft=<%=draftNum%>';">
 	</center>
 </div>
 

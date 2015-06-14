@@ -24,7 +24,7 @@
 				
 		<% for(gw.draft.Draft d : dftDAO.getDraftList()) { %>
 
-			<tr onclick="javascript_: location.href='main.jsp?idx1=1&idx2=4&draft=<%=d.getDraft()%>';">
+			<tr onclick="javascript_: location.href='main.jsp?idx1=1&idx2=3&draft=<%=d.getDraft()%>';">
 				<td><%=d.getDraft() %> </td>
 				<td style="text-align: left; width: 350px;"><%=d.getTitle() %> </td>
 				<td><%=d.getDraftername() %> </td>

@@ -15,7 +15,7 @@ public class DraftDAO {
 	ResultSet rs = null;
 	List<Draft> draftlist = new ArrayList<Draft>();
 	
-	public Draft show(int  draftNum) {
+	public Draft read(int  draftNum) {
 		conn = DBConn.connect();
 		try {
 			

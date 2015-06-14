@@ -14,14 +14,14 @@
 	}
 	else {
 		draftNum = Integer.parseInt(request.getParameter("draft"));
-		dft = dftDAO.show(draftNum);
+		dft = dftDAO.read(draftNum);
 		if(dft == null) {
 			out.println("널!!!널이다!!!!");	
 	}
 	}
 %>
 <div id="draft_edit">
-<form name="form1" method="post" action="main.jsp?idx1=1&idx2=4&draft=<%=draftNum%>">
+<form name="form1" method="post" action="main.jsp?idx1=1&idx2=3&draft=<%=draftNum%>">
 	<table border="1">
 		<tr>
 			<th>제11&nbsp;&nbsp;&nbsp;목</th>
@@ -42,7 +42,7 @@
 	<center>
 	<input type="hidden" name="from" value="edit">
 	<input type="submit" value="수정 완료" style="width: 80px;">&nbsp;&nbsp;
-	<input type="button" value="취소" style="width: 80px;" onclick="javascript_: location.href='main.jsp?idx1=1&idx2=4&draft=<%=draftNum%>';">
+	<input type="button" value="취소" style="width: 80px;" onclick="javascript_: location.href='main.jsp?idx1=1&idx2=3&draft=<%=draftNum%>';">
 	</center>
 </form>
 	
