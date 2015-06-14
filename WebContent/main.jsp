@@ -5,6 +5,8 @@
 <jsp:useBean id="empDAO" class="gw.employee.EmployeeDAO"/>
 <jsp:useBean id="dft" class="gw.draft.Draft"/>
 <jsp:useBean id="dftDAO" class="gw.draft.DraftDAO"/>
+<jsp:useBean id="board" class="gw.board.Board"/>
+<jsp:useBean id="boardDAO" class="gw.board.BoardDAO"/>
 <%
 	if(session.getAttribute("id") == null) {
 		response.sendRedirect("login.jsp?error=1");

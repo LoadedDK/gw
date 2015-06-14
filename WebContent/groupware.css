@@ -363,6 +363,155 @@
 }
 
 
+/*board_list*/
+
+#board_list {
+	
+}
+
+#board_list table {
+	border-collapse: collapse;
+	width: 600px;
+}
+
+#board_list table tr th {
+	background-color: #8eb4e3;
+	color: #ffffff;
+	text-style: bold;
+}
+
+#draft_list table tr td {
+	text-align: center;
+}
+
+
+/*board_write*/
+
+#board_write {
+	
+}
+
+#board_write table {
+	border-collapse: collapse;
+	border: none;
+	text-align: center;
+	width: 600px;
+}
+
+#board_write table tr th {
+	background-color: #8eb4e3;
+	color: #ffffff;
+	width: 120px;
+	text-align: left;
+	height: 25px;
+	padding-left: 3px;
+}
+
+#board_write table tr td {
+	color: #000000;
+	text-align: left;
+	height: 25px;
+	padding-left: 3px;
+}
+	
+.board_write_textarea {
+	border: none;
+	outline: none;
+	text-align: top;
+	resize: none;
+}
+
+	
+/*board_show*/
+
+#board_show {
+	
+}
+
+#board_show table {
+	border-collapse: collapse;
+	border: none;
+	text-align: center;
+	width: 600px;
+}
+
+#board_show table tr th {
+		background-color: #8eb4e3;
+		color: #ffffff;
+		width: 120px;
+		text-align: left;
+		height: 25px;
+		padding-left: 3px;
+}
+
+#board_show table tr td {
+		color: #000000;
+		text-align: left;
+		text-align: top;
+		padding-left: 3px;
+}
+
+
+/*board_edit*/
+
+#board_edit {
+	
+}
+
+#board_edit table {
+	border-collapse: collapse;
+	border: none;
+	text-align: center;
+	width: 600px;
+}
+
+#board_edit table tr th {
+		background-color: #8eb4e3;
+		color: #ffffff;
+		width: 120px;
+		text-align: left;
+		height: 25px;
+		padding-left: 3px;
+}
+
+#board_edit table tr td {
+		color: #000000;
+		text-align: left;
+		text-align: top;
+		padding-left: 3px;
+}
+
+
+/* board_delete */
+
+#board_delete {
+	
+}
+
+#board_delete table {
+	border-collapse: collapse;
+	border: none;
+	text-align: center;
+	width: 600px;
+}
+
+#board_delete table tr th {
+		background-color: #8eb4e3;
+		color: #ffffff;
+		width: 120px;
+		text-align: left;
+		height: 25px;
+		padding-left: 3px;
+}
+
+#board_delete table tr td {
+		color: #000000;
+		text-align: left;
+		text-align: top;
+		padding-left: 3px;
+}
+
+
 /*common*/
 .textarea1 {
 	border: none;
