@@ -6,6 +6,7 @@
 			<li><a href="main.jsp?idx1=1">업무관리</a></li>
 			<li><a href="main.jsp?idx1=2">사원관리</a></li>
 			<li><a href="main.jsp?idx1=3">커뮤니티</a></li>
+			<li><a href="main.jsp?idx1=4">마이페이지</a></li>
 		</ul>
 	</div>
 </div>

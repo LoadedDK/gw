@@ -88,37 +88,37 @@
 	background-color: #606060;
 }
 
-	#menu ul {
-		
+#menu ul {
+	
+}
+	#menu ul li {
+		width: 100px;
+		height: 40px;
+		float: left;
+		list-style: none;
 	}
-		#menu ul li {
-			width: 100px;
-			height: 40px;
-			float: left;
-			list-style: none;
-		}
-		
-		#menu ul li:hover {
-			background-color: #969696;
-		}
-		
-		#menu ul li a {
-			display: block;
-			box-sizing: border-box;
-			width: 100%;
-			height: 100%;
-			color: #ffffff;
-			text-align: center;
-			padding-top: 8px;
-		}
-		
-		#menu ul li a:link, #menu a:visited {
-			text-decoration: none;
-		}
-		
-		#menu ul li:hover {
-			background-color: #969696;
-		}
+	
+	#menu ul li:hover {
+		background-color: #969696;
+	}
+	
+	#menu ul li a {
+		display: block;
+		box-sizing: border-box;
+		width: 100%;
+		height: 100%;
+		color: #ffffff;
+		text-align: center;
+		padding-top: 8px;
+	}
+	
+	#menu ul li a:link, #menu a:visited {
+		text-decoration: none;
+	}
+	
+	#menu ul li:hover {
+		background-color: #969696;
+	}
 		
 
 /*side_left*/
@@ -135,28 +135,28 @@
 		margin: 0;
 	}
 	
-	#side_left ul li {
-		width: 200px;
-		height: 25px;
-		color: #ffffff;
-	}
-	
-	#side_left ul li:hover {
-		background-color: #969696;
-	}
-	
-	#side_left ul li a {
-		display: block;
-		box-sizing: border-box;
-		width: 100%;
-		height: 100%;
-		color: #ffffff;
-		padding-left: 5px;
-	}
-	
-	#side_left ul li a:link, #side_left ul li a:visited {
-		text-decoration: none;
-	}
+		#side_left ul li {
+			width: 200px;
+			height: 25px;
+			color: #ffffff;
+		}
+		
+		#side_left ul li:hover {
+			background-color: #969696;
+		}
+		
+		#side_left ul li a {
+			display: block;
+			box-sizing: border-box;
+			width: 100%;
+			height: 100%;
+			color: #ffffff;
+			padding-left: 5px;
+		}
+		
+		#side_left ul li a:link, #side_left ul li a:visited {
+			text-decoration: none;
+		}
 	
 
 /*content*/
@@ -177,15 +177,15 @@
 	text-align: center;
 }
 
-#reg_form table tr th {
-	background-color: #8eb4e3;
-	color: #ffffff;
-}
-
-#reg_form table tr td {
-	color: #000000;
-	background-color: #d5e3f4;
-}
+	#reg_form table tr th {
+		background-color: #8eb4e3;
+		color: #ffffff;
+	}
+	
+	#reg_form table tr td {
+		color: #000000;
+		background-color: #d5e3f4;
+	}
 
 /*employee_reg*/
 
@@ -209,14 +209,14 @@
 	text-align: center;
 }
 
-#employee_list table tr th {
-	background-color: #8eb4e3;
-	color: #ffffff;
-	text-style: bold;
-}
-
-#employee_list table tr td {
-}
+	#employee_list table tr th {
+		background-color: #8eb4e3;
+		color: #ffffff;
+		text-style: bold;
+	}
+	
+	#employee_list table tr td {
+	}
 
 /*draft_list*/
 
@@ -229,15 +229,15 @@
 	width: 600px;
 }
 
-#draft_list table tr th {
-	background-color: #8eb4e3;
-	color: #ffffff;
-	text-style: bold;
-}
-
-#draft_list table tr td {
-	text-align: center;
-}
+	#draft_list table tr th {
+		background-color: #8eb4e3;
+		color: #ffffff;
+		text-style: bold;
+	}
+	
+	#draft_list table tr td {
+		text-align: center;
+	}
 
 
 /*draft_write*/
@@ -272,7 +272,6 @@
 .draft_write_textarea {
 	border: none;
 	outline: none;
-	text-align: top;
 	resize: none;
 }
 
@@ -290,21 +289,20 @@
 	width: 600px;
 }
 
-#draft_read table tr th {
+	#draft_read table tr th {
 		background-color: #8eb4e3;
 		color: #ffffff;
 		width: 120px;
 		text-align: left;
 		height: 25px;
 		padding-left: 3px;
-}
-
-#draft_read table tr td {
+	}
+	
+	#draft_read table tr td {
 		color: #000000;
 		text-align: left;
-		text-align: top;
 		padding-left: 3px;
-}
+	}
 
 
 /*draft_edit*/
@@ -320,21 +318,20 @@
 	width: 600px;
 }
 
-#draft_edit table tr th {
+	#draft_edit table tr th {
 		background-color: #8eb4e3;
 		color: #ffffff;
 		width: 120px;
 		text-align: left;
 		height: 25px;
 		padding-left: 3px;
-}
-
-#draft_edit table tr td {
+	}
+	
+	#draft_edit table tr td {
 		color: #000000;
 		text-align: left;
-		text-align: top;
 		padding-left: 3px;
-}
+	}
 
 
 /* draft_delete */
@@ -350,21 +347,20 @@
 	width: 600px;
 }
 
-#draft_delete table tr th {
+	#draft_delete table tr th {
 		background-color: #8eb4e3;
 		color: #ffffff;
 		width: 120px;
 		text-align: left;
 		height: 25px;
 		padding-left: 3px;
-}
-
-#draft_delete table tr td {
+	}
+	
+	#draft_delete table tr td {
 		color: #000000;
 		text-align: left;
-		text-align: top;
 		padding-left: 3px;
-}
+	}
 
 
 /*board_list*/
@@ -378,15 +374,15 @@
 	width: 600px;
 }
 
-#board_list table tr th {
-	background-color: #8eb4e3;
-	color: #ffffff;
-	text-style: bold;
-}
-
-#board_list table tr td {
-	text-align: center;
-}
+	#board_list table tr th {
+		background-color: #8eb4e3;
+		color: #ffffff;
+		text-style: bold;
+	}
+	
+	#board_list table tr td {
+		text-align: center;
+	}
 
 
 /*board_write*/
@@ -402,26 +398,25 @@
 	width: 600px;
 }
 
-#board_write table tr th {
-	background-color: #8eb4e3;
-	color: #ffffff;
-	width: 120px;
-	text-align: left;
-	height: 25px;
-	padding-left: 3px;
-}
-
-#board_write table tr td {
-	color: #000000;
-	text-align: left;
-	height: 25px;
-	padding-left: 3px;
-}
+	#board_write table tr th {
+		background-color: #8eb4e3;
+		color: #ffffff;
+		width: 120px;
+		text-align: left;
+		height: 25px;
+		padding-left: 3px;
+	}
+	
+	#board_write table tr td {
+		color: #000000;
+		text-align: left;
+		height: 25px;
+		padding-left: 3px;
+	}
 	
 .board_write_textarea {
 	border: none;
 	outline: none;
-	text-align: top;
 	resize: none;
 }
 
@@ -439,21 +434,20 @@
 	width: 600px;
 }
 
-#board_read table tr th {
+	#board_read table tr th {
 		background-color: #8eb4e3;
 		color: #ffffff;
 		width: 120px;
 		text-align: left;
 		height: 25px;
 		padding-left: 3px;
-}
-
-#board_read table tr td {
+	}
+	
+	#board_read table tr td {
 		color: #000000;
 		text-align: left;
-		text-align: top;
 		padding-left: 3px;
-}
+	}
 
 
 /*board_edit*/
@@ -469,21 +463,20 @@
 	width: 600px;
 }
 
-#board_edit table tr th {
+	#board_edit table tr th {
 		background-color: #8eb4e3;
 		color: #ffffff;
 		width: 120px;
 		text-align: left;
 		height: 25px;
 		padding-left: 3px;
-}
-
-#board_edit table tr td {
+	}
+	
+	#board_edit table tr td {
 		color: #000000;
 		text-align: left;
-		text-align: top;
 		padding-left: 3px;
-}
+	}
 
 
 /* board_delete */
@@ -499,27 +492,52 @@
 	width: 600px;
 }
 
-#board_delete table tr th {
+	#board_delete table tr th {
 		background-color: #8eb4e3;
 		color: #ffffff;
 		width: 120px;
 		text-align: left;
 		height: 25px;
 		padding-left: 3px;
-}
+	}
 
-#board_delete table tr td {
+	#board_delete table tr td {
 		color: #000000;
 		text-align: left;
-		text-align: top;
 		padding-left: 3px;
+	}
+	
+/*mypage*/
+
+#mypage {
+	text-align: center;
+	width: 600px;
 }
 
+#mypage table {
+	border-collapse: collapse;
+	width: 400px;
+	text-align: center;
+}
+
+	#mypage table tr th {
+		border-collapse: collapse;
+		background-color: #8eb4e3;
+		color: #ffffff;
+		text-style: bold;
+		text-align: center;
+	}
+
+	#mypage table tr td {
+		color: #000000;
+		text-align: left;
+		padding-left: 3px;
+	}
+	
 
 /*common*/
 .textarea1 {
 	border: none;
 	outline: none;
-	text-align: top;
 	resize: none;	
 }

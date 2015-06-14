@@ -1,12 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="gw.*"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="gw.*"%>
 <jsp:setProperty name="board" property="*"/>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-</head>
-<body>
 <%
 	int boardNum = 1;
 	String title;
@@ -35,7 +28,6 @@
 %>
 <div id="board_read">
 	<table border="1">
-	
 		<tr>
 			<th>제&nbsp;&nbsp;&nbsp;목</th>
 			<td><%=board.getTitle()%></td>
@@ -50,15 +42,9 @@
 		<tr>
 			<td colspan="2" height="310px" > <textarea class="textarea1" cols="90" rows="20" name="content" readOnly><%=board.getContent()%></textarea></td>
 		</tr>
-		
 	</table>
 	<br>
-	<center>
 	<input type="button" value="수정" style="width: 80px;" onclick="javascript_: location.href='main.jsp?idx1=3&idx2=4&board=<%=boardNum%>';">&nbsp;&nbsp;
 	<input type="button" value="목록" style="width: 80px;" onclick="javascript_: location.href='main.jsp?idx1=3&idx2=1';">&nbsp;&nbsp;
 	<input type="button" value="삭제" style="width: 80px;" onclick="javascript_: location.href='main.jsp?idx1=3&idx2=5&board=<%=boardNum%>';">
-	</center>
 </div>
-
-</body>
-</html>

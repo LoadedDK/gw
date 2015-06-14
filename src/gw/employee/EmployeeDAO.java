@@ -19,7 +19,7 @@ public class EmployeeDAO {
 		conn = DBConn.connect();
 		try {
 			
-			String query = "INSERT INTO employee (id, pw, name, rank, depname, tel, phone, joinDate) VALUES (?, ?, ?, ?, ?, ?, ?, NOW())";
+			String query = "insert into employee (id, pw, name, rank, depname, tel, phone, joinDate) values (?, ?, ?, ?, ?, ?, ?, now())";
 			pstmt = conn.prepareStatement(query);
 			
 			pstmt.setInt(1, employee.getId());
@@ -41,9 +41,9 @@ public class EmployeeDAO {
 			try {
 				pstmt.close();
 				conn.close();
+				System.out.println("close");
 			}
 			catch (SQLException e) {
-				System.out.println("close");
 				e.printStackTrace();
 			}
 		}
@@ -76,50 +76,51 @@ public class EmployeeDAO {
 		}
 		return result;
 	}
+	
 	//DB에서 리스트로 사원 정보 땡겨옴
-		public Employee getEmployee(int id) {
-			conn = DBConn.connect();
-			try {
-				String query = "SELECT * FROM employee WHERE id=?";
-				pstmt = conn.prepareStatement(query);
-				pstmt.setInt(1, id);
-				ResultSet rs = pstmt.executeQuery();
-				
-				rs.next();
-				Employee employee = new Employee();
-				employee.setId(rs.getInt("id"));
-				employee.setPw(rs.getString("pw"));
-				employee.setName(rs.getString("name"));
-				employee.setRank(rs.getString("rank"));
-				employee.setDepname(rs.getString("depname"));
-				employee.setTel(rs.getString("tel"));
-				employee.setPhone(rs.getString("phone"));
-				
-				return employee;
-				
-			}
-			catch(Exception e) {
-				e.printStackTrace();
-				System.out.println(e);
-			}
-			finally {
-				try {
-					pstmt.close();
-					conn.close();
-				}
-				catch (SQLException e) {
-					System.out.println("close");
-					e.printStackTrace();
-				}
-			}
-			return null;
+	public Employee getEmployee(int id) {
+		conn = DBConn.connect();
+		try {
+			String query = "select * from employee where id=?";
+			pstmt = conn.prepareStatement(query);
+			pstmt.setInt(1, id);
+			ResultSet rs = pstmt.executeQuery();
+			
+			rs.next();
+			Employee employee = new Employee();
+			employee.setId(rs.getInt("id"));
+			employee.setPw(rs.getString("pw"));
+			employee.setName(rs.getString("name"));
+			employee.setRank(rs.getString("rank"));
+			employee.setDepname(rs.getString("depname"));
+			employee.setTel(rs.getString("tel"));
+			employee.setPhone(rs.getString("phone"));
+			
+			return employee;
+			
 		}
+		catch(Exception e) {
+			e.printStackTrace();
+			System.out.println(e);
+		}
+		finally {
+			try {
+				pstmt.close();
+				conn.close();
+			}
+			catch (SQLException e) {
+				System.out.println("close");
+				e.printStackTrace();
+			}
+		}
+		return null;
+	}
 		
 	//DB에서 리스트로 사원 정보 땡겨옴
 	public void getEmployeeList() {
 		conn = DBConn.connect();
 		try {
-			String query = "SELECT * FROM employee";
+			String query = "select * from employee";
 			pstmt = conn.prepareStatement(query);
 			ResultSet rs = pstmt.executeQuery(query);
 			
@@ -146,6 +147,38 @@ public class EmployeeDAO {
 			}
 			catch (SQLException e) {
 				System.out.println("close");
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	public void editEmployee(Employee emp) {
+		conn = DBConn.connect();
+		try {
+			String query = "update employee set pw=?, name=?, rank=?, depname=?, tel=?, phone=? WHERE id=?";
+			pstmt = conn.prepareStatement(query);
+			
+			pstmt.setString(1, emp.getPw());
+			pstmt.setString(2, emp.getName());
+			pstmt.setString(3, emp.getRank());
+			pstmt.setString(4, emp.getDepname());
+			pstmt.setString(5, emp.getTel());
+			pstmt.setString(6, emp.getPhone());
+			pstmt.setInt(7, emp.getId());
+			
+			pstmt.executeQuery();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			System.out.println(e);
+		}
+		finally {
+			try {
+				pstmt.close();
+				conn.close();
+				System.out.println("close");
+			}
+			catch (SQLException e) {
 				e.printStackTrace();
 			}
 		}

@@ -34,6 +34,7 @@
 			<tr>
 				<td colspan="2" align="center">
 				<input type="submit" value="사원 등록 완료"></td>
+				<% empDAO.register(emp); %>
 			</tr>
 		</table>
 	</form>

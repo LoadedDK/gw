@@ -37,4 +37,16 @@
 		</div>
 		<%
 	}
+	else if(request.getParameter("idx1").equals("4")) {
+		%>
+		<div id="side_left">
+			<div style="color: #ffffff; text-align:center; font-weight: bold; font-size: 15pt; color: #0000ff;">
+				마이페이지
+			</div>
+			<ul>
+				<li><a href="main.jsp?idx1=4&idx2=1">마이페이지</a></li>
+			</ul>
+		</div>
+		<%
+	}
 %>
