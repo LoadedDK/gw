@@ -16,8 +16,9 @@
 	if(request.getParameter("draft") == null) {
 		response.sendRedirect("main.jsp?idx1=1&idx2=1");
 	}
-	else if(request.getParameter("draft").equals("0")) {
+	else if(request.getParameter("draft").equals("0")) {//from write
 		dftDAO.write(dft);
+		draftNum = dftDAO.getLatestdraft(dft.getDrafter());
 	}
 	else {
 		draftNum = Integer.parseInt(request.getParameter("draft"));
@@ -28,10 +29,10 @@
 			content = request.getParameter("content");
 			dftDAO.edit(title, content, draftNum);
 		}
-		dft = dftDAO.read(draftNum);
-		if(dft == null) {
-			out.println("널!!!널이다!!!!");	
-		}
+	}
+	dft = dftDAO.read(draftNum);
+	if(dft == null) {
+		out.println("널!!!널이다!!!!");	
 	}
 %>
 <div id="draft_read">
@@ -53,7 +54,7 @@
 		</tr>
 		<tr>
 			<th>결재권자</th>
-			<td><%=dft.getDraftername()%></td>
+			<td><%=dft.getSignername()%></td>
 		</tr>
 		
 	</table>
@@ -61,11 +62,11 @@
 	<center>
 	<%
 		gw.employee.Employee user = empDAO.getEmployee(Integer.parseInt(session.getAttribute("id").toString()));
-		if(user.getDepname().toString().equals(dft.getDepname().toString())) {
+		if(user.getDepname().toString().equals(dft.getDepname().toString()) && user.getRank().equals("과장")) {
 	%>
-		<input type="button" value="결재승인" style="width: 80px;" onclick="javascript_: location.href='main.jsp?idx1=1&idx2=6&draft=<%=draftNum%>';">&nbsp;&nbsp;
-	<%
-		}
+	<input type="button" value="결재승인" style="width: 80px;" onclick="javascript_: location.href='main.jsp?idx1=1&idx2=6&draft=<%=draftNum%>';">&nbsp;&nbsp;
+<%
+	}
 		if(user.getId() == dft.getDrafter()) {
 	%>
 		<input type="button" value="수정" style="width: 80px;" onclick="javascript_: location.href='main.jsp?idx1=1&idx2=4&draft=<%=draftNum%>';">&nbsp;&nbsp;

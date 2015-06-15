@@ -62,7 +62,7 @@ public class DraftDAO {
 		conn = DBConn.connect();
 		try {
 			
-			String query = "INSERT INTO draft (title, content, drafter ,draftername, issign, regtime) VALUES (?, ?, ?, ?, 'N', NOW())";
+			String query = "INSERT INTO draft (title, content, drafter ,draftername, signer, signername, issign, regtime) VALUES (?, ?, ?, ?, ?, ?, 'N', NOW())";
 			
 			pstmt = conn.prepareStatement(query);
 			
@@ -70,6 +70,8 @@ public class DraftDAO {
 			pstmt.setString(2, draft.getContent());
 			pstmt.setInt(3, draft.getDrafter());
 			pstmt.setString(4, draft.getDraftername());
+			pstmt.setInt(5, draft.getSigner());
+			pstmt.setString(6, draft.getSignername());
 			
 			pstmt.executeUpdate();
 		}
@@ -91,20 +93,49 @@ public class DraftDAO {
 		return true;
 	}
 	
+	public int getLatestdraft(int drafter) {
+		conn = DBConn.connect();
+		try {
+			
+			String query = "SELECT draft FROM draft WHERE drafter=? ORDER BY draft DESC";
+			pstmt = conn.prepareStatement(query);
+			pstmt.setInt(1, drafter);
+			ResultSet rs = pstmt.executeQuery();
+			
+			rs.next();
+			return rs.getInt("draft");
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			System.out.println(e);
+			return 0;
+		}
+		finally {
+			try {
+				pstmt.close();
+				conn.close();
+			}
+			catch (SQLException e) {
+				System.out.println("close");
+				e.printStackTrace();
+			}
+		}
+	}
+	
 	public Draft findSigner(String depname) {
 		conn = DBConn.connect();
 		try {
 			
-			String query = "SELECT * FROM employee WHERE depname=? AND rank='이사'";
+			String query = "SELECT id, name FROM employee WHERE depname=? AND rank='과장'";
 			pstmt = conn.prepareStatement(query);
 			pstmt.setString(1, depname);
 			ResultSet rs = pstmt.executeQuery();
 			
 			rs.next();
-			String id = rs.getString("id");
-			String name = rs.getString("name");
-			
-			
+			Draft draft = new Draft();
+			draft.setSigner(rs.getInt("id"));
+			draft.setSignername(rs.getString("name"));
+			return draft;
 		}
 		catch(Exception e) {
 			e.printStackTrace();
@@ -156,12 +187,47 @@ public class DraftDAO {
 		return true;
 	}
 	
+	
+	
+	public boolean sign(int draft) {
+		conn = DBConn.connect();
+		try {
+			
+			String query = "UPDATE draft SET issign='Y' WHERE draft=?";
+
+			pstmt = conn.prepareStatement(query);
+			
+			pstmt.setInt(1, draft);
+			
+			pstmt.executeQuery();
+			
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			System.out.println(e);
+			return false;
+		}
+		finally {
+			try {
+				pstmt.close();
+				conn.close();
+			}
+			catch (SQLException e) {
+				System.out.println("close");
+				e.printStackTrace();
+			}
+		}
+		return true;
+	}
+	
+	
+	
 	public boolean delete(int draft) {
 		conn = DBConn.connect();
 		try {
 			
 			String query = "UPDATE draft SET isdel='Y' WHERE draft=?";
-			//String query = "INSERT INTO draft (title, content, drafter ,draftername, filepath, issign, regtime) VALUES (?, ?, ?, ?, ?, 'N', NOW())";
+
 			pstmt = conn.prepareStatement(query);
 			pstmt.setInt(1, draft);
 			pstmt.executeQuery();
@@ -183,8 +249,8 @@ public class DraftDAO {
 		}
 		return true;
 	}
-	
-	
+		
+		
 	
 	//DB에서 리스트로 기안 리스트 땡겨옴
 	public void setDraftList(String depname) {

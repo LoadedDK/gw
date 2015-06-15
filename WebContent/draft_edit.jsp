@@ -24,7 +24,7 @@
 <form name="form1" method="post" action="main.jsp?idx1=1&idx2=3&draft=<%=draftNum%>">
 	<table border="1">
 		<tr>
-			<th>제11&nbsp;&nbsp;&nbsp;목</th>
+			<th>제&nbsp;&nbsp;&nbsp;목</th>
 			<td><input type="text" name="title" value= <%=dft.getTitle()%> style="width: 200px;"></td>
 		</tr>
 		<tr>

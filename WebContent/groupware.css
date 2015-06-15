@@ -367,6 +367,37 @@
 }
 
 
+/* draft_sign */
+
+#draft_sign {
+	width: 600px;
+}
+
+#draft_sign table {
+	border-collapse: collapse;
+	border: none;
+	text-align: center;
+	width: 600px;
+}
+
+#draft_sign table tr th {
+		background-color: #8eb4e3;
+		color: #ffffff;
+		width: 120px;
+		text-align: left;
+		height: 25px;
+		padding-left: 3px;
+}
+
+#draft_sign table tr td {
+		color: #000000;
+		text-align: left;
+		text-align: top;
+		padding-left: 3px;
+}
+
+
+
 /*board_list*/
 
 #board_list {
@@ -526,6 +557,7 @@
 		background-color: #8eb4e3;
 		color: #ffffff;
 		text-style: bold;
+		
 		text-align: center;
 	}
 

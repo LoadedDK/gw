@@ -14,7 +14,13 @@
 </head>
 <body>
 
-<% gw.employee.Employee e = empDAO.getEmployee(Integer.parseInt(session.getAttribute("id").toString())); %>
+<%
+	gw.employee.Employee e = empDAO.getEmployee(Integer.parseInt(session.getAttribute("id").toString()));
+	out.println("부서명:"+e.getDepname());
+	gw.draft.Draft d = dftDAO.findSigner(e.getDepname());
+	out.println("결재권자 사번:"+d.getSigner());
+	out.println("결재권자 이름:"+d.getSignername());
+	 %>
 
 <div id="draft_write">
 	<form name="form1" method="post" action="main.jsp?idx1=1&idx2=3&draft=0">
@@ -36,6 +42,8 @@
 		</table>
 		
 		<input type="hidden" name="drafter" value=<%=e.getId()%> >
+		<input type="hidden" name="signer" value=<%=d.getSigner()%> >
+		<input type="hidden" name="signername" value=<%=d.getSignername()%> >
 		<input type="hidden" name="from" value="write" >
 		<br>
 		<center>
