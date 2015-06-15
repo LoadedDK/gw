@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="gw.*"%>
 <jsp:setProperty name="emp" property="*" />
-<link rel="stylesheet" href="groupware.css" type="text/css" media="screen" />
 
 <% empDAO.register(emp); %>
 

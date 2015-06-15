@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="gw.*"%>
 <% empDAO.getEmployeeList(); %>
-<link rel="stylesheet" href="groupware.css" type="text/css" media="screen" />
 
 <div id="employee_list">
 	<table border="1">

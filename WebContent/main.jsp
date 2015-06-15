@@ -14,7 +14,7 @@
 %>
 <html>
 <style type="text/css">
-	html, body {height:100%;}
+	html {height:100%;}
 </style>
 <head>
 <link rel="stylesheet" href="groupware.css" type="text/css" media="screen" />

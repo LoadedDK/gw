@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <jsp:setProperty name="emp" property="*"/>
-<link rel="stylesheet" href="groupware.css" type="text/css" media="screen" />
 
 <%
 	if(request.getParameter("edit") == null) {
@@ -9,9 +8,10 @@
 	else if(request.getParameter("edit").equals("1")) {
 		empDAO.editEmployee(emp);
 	}
+	
+	gw.employee.Employee user = empDAO.getEmployee(Integer.parseInt(session.getAttribute("id").toString()));
 %>
 
-<% gw.employee.Employee user = empDAO.getEmployee(Integer.parseInt(session.getAttribute("id").toString())); %>
 <div id="mypage">
 	<form name="form1" method="post" action="main.jsp?idx1=4&idx2=1&edit=1">
 		<table border="1">

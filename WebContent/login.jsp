@@ -16,7 +16,7 @@
 
 			}
 			else if (request.getParameter("error").equals("1")) {
-				out.println("로그인을 해야 이용할 수 있습니다.<br><br>");
+				out.println("로그인을 해야 이용할 수 있습니다.<br>");
 			}
 		%>
 		<form name="loginform" method="post" action="user_control.jsp">

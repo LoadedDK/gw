@@ -28,6 +28,3 @@
 		<input type="button" value="취소" style="width: 80px;" onclick="javascript_: location.href='main.jsp?idx1=3&idx2=1';">
 	</form>
 </div>
-
-</body>
-</html>

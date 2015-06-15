@@ -222,6 +222,7 @@
 
 #draft_list {
 	width: 600px;
+	text-align: center;
 }
 
 #draft_list table {
@@ -244,6 +245,7 @@
 
 #draft_write {
 	width: 600px;
+	text-align: center;
 }
 
 #draft_write table {
@@ -281,6 +283,7 @@
 
 #draft_read {
 	width: 600px;
+	text-align: center;
 }
 
 #draft_read table {
@@ -311,6 +314,7 @@
 
 #draft_edit {
 	width: 600px;
+	text-align: center;
 }
 
 #draft_edit table {
@@ -341,6 +345,7 @@
 
 #draft_delete {
 	width: 600px;
+	text-align: center;
 }
 
 #draft_delete table {
@@ -371,6 +376,7 @@
 
 #draft_sign {
 	width: 600px;
+	text-align: center;
 }
 
 #draft_sign table {
@@ -402,6 +408,7 @@
 
 #board_list {
 	width: 600px;
+	text-align: center;
 }
 
 #board_list table {
@@ -424,6 +431,7 @@
 
 #board_write {
 	width: 600px;
+	text-align: center;
 }
 
 #board_write table {
@@ -461,6 +469,7 @@
 
 #board_read {
 	width: 600px;
+	text-align: center;
 }
 
 #board_read table {
@@ -491,6 +500,7 @@
 
 #board_edit {
 	width: 600px;
+	text-align: center;
 }
 
 #board_edit table {
@@ -521,6 +531,7 @@
 
 #board_delete {
 	width: 600px;
+	text-align: center;
 }
 
 #board_delete table {
