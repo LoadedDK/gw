@@ -17,11 +17,11 @@
 		<table border="1">
 			<tr>
 				<th>제&nbsp;&nbsp;&nbsp;목</th>
-				<td><input type="text" name="title" value=<%=board.getTitle()%> style="width: 200px;"></td>
+				<td><input type="text" name="title" value="<%=board.getTitle()%>" style="width: 200px;"></td>
 			</tr>
 			<tr>
 				<th>작성자</th>
-				<td><input type="text" name="boardername" style="width: 80px;" readOnly value=<%=board.getWritername()%>></td>
+				<td><input type="text" name="boardername" style="width: 80px;" readOnly value="<%=board.getWritername()%>"></td>
 			</tr>
 			<tr>
 				<th colspan="2" align="center">내&nbsp;&nbsp;&nbsp;용</th>

@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
 	int draftNum = 1;
 	if(request.getParameter("draft") == null) {
@@ -16,11 +17,11 @@
 	<table border="1">
 		<tr>
 			<th>제&nbsp;&nbsp;&nbsp;목</th>
-			<td><input type="text" name="title" value= <%=dft.getTitle()%> style="width: 200px;"></td>
+			<td><input type="text" name="title" value="<%=dft.getTitle()%>" style="width: 200px;"></td>
 		</tr>
 		<tr>
 			<th>작성자</th>
-			<td><input type="text" name="draftername" style="width: 80px;" readOnly value=<%=dft.getDraftername()%> ></td>
+			<td><input type="text" name="draftername" style="width: 80px;" readOnly value="<%=dft.getDraftername()%>" ></td>
 		</tr>
 		<tr>
 			<th colspan="2" align="center">내&nbsp;&nbsp;&nbsp;용</th>
