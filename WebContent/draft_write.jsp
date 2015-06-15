@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="gw.*"%>
 <%
-	dftDAO.setDraftList(user.getDepname().toString());
 	gw.employee.Employee e = empDAO.getEmployee(Integer.parseInt(session.getAttribute("id").toString()));
+	dftDAO.setDraftList(e.getDepname().toString());
+	
 	gw.draft.Draft d = dftDAO.findSigner(e.getDepname());
 %>
 
